@@ -13,9 +13,8 @@ class PropertiesController < ApplicationController
   end
 
   def create
-    @user = current_user
     @property = Property.create(property_params)
-    @property.user = @user
+    @property.user = current_user
     if @property.save
       redirect_to property_path(@property)
     else
