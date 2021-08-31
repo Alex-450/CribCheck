@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Landlord name: <%= @landlord.name %></h1>
+      <h2>Properties:</h2>
+      <% @properties.each do |property| %>
+      <%= property.address %>
+      <%= link_to "See property", property_path(property) %>
+      <% end %>
+    </div>
+  </div>
+</div>

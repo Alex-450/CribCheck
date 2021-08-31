@@ -25,12 +25,13 @@ import { navBarToggleMenu } from '../components/navbar';
 
 // External imports
 import "bootstrap";
-
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { initSelect2 } from '../components/init_select2';
+import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   navBarToggleMenu();
+  initSelect2();
+  initMapbox();
 });

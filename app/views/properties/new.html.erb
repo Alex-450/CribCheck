@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Add a new property</h1>
+      <%= simple_form_for @property do |f| %>
+        <%= f.input :address, placeholder: "3138 Johnstown Road Chicago" %>
+        <%= f.association :landlord, input_html: { class: 'select2Landlord' } %>
+        <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
