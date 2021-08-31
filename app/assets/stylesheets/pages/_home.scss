@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+.banner {
+  height: 80vh;
+  background-color: $light-green;
+}
+
+.step > img {
+  width: 200px;
+  height: 300px;
+}
+
+.home-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  justify-items: center;
+}
