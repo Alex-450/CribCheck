@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :notifications
   has_many :properties
   has_many :reviews
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end
