@@ -10,3 +10,125 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbars{
+  display: flex;
+  background-color: $light-green;
+  padding: 20px;
+
+}
+
+.collapse {
+  margin-top: 20px;
+  margin-right: 80px;
+}
+
+i {
+  color: $dark-green;
+}
+li {
+  padding: 0 10px;
+
+}
+// dropdown menu
+
+.sections{
+  position: relative;
+}
+.menu-btn__wrapper{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.menu-btn__line:before,
+.menu-btn__line:after{
+  content: '';
+  transition: .5s;
+}
+.menu-btn__line:before{
+  transform: translateY(-5px);
+}
+.menu-btn__line:after{
+  transform: translateY(5px);
+}
+.menu-btn{
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  &__line,
+  &__line:before,
+  &__line:after{
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -1px;
+    transition: .5s;
+  }
+}
+.menu-btn--open{
+  .menu-btn__line{
+    transform: rotate(-450deg);
+    &:before{
+      transform: rotate(-35deg);
+      transform-origin: left bottom;
+      width: 13px;
+    }
+    &:after{
+      transform: rotate(35deg);
+      transform-origin: left top;
+      width: 13px;
+    }
+  }
+}
+.menu-block{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.menu-nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: .5s;
+  transform-origin: top center;
+  transform: scaleY(0) translateY(-20px);
+  opacity: 0;
+  &.with-border{
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    margin-top: -40px;
+    border-radius: 50px;
+  }
+  &--open{
+    transform: scaleY(1) translateY(0);
+    opacity: 1;
+  }
+  &__name{
+    position: absolute;
+    right: 45px;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    transition: .3s;
+  }
+  &__link{
+    display: inline-block;
+    color: #000;
+    margin-top: 20px;
+    transition: .4s;
+    position: relative;
+    &:hover{
+      .menu-nav__name{
+        opacity: 1;
+      }
+    }
+  }
+}
