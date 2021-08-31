@@ -4,6 +4,7 @@
       <h1>Add a new property</h1>
       <%= simple_form_for @property do |f| %>
         <%= f.input :address, placeholder: "3138 Johnstown Road Chicago" %>
+        <%= f.association :landlord, prompt: "Select landlord" %>
         <%= f.button :submit, class: "btn btn-primary" %>
       <% end %>
     </div>
