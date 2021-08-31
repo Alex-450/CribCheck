@@ -1,0 +1,16 @@
+<div class="container">
+  <%= simple_form_for [@property, @review] do |f| %>
+    <div class="form-inputs">
+      <%= f.input :landlord_comment, placeholder: "Type your review..." %>
+      <%= f.input :property_comment, placeholder: "Type your review..." %>
+      <%= f.input :property_rating %>
+      <%= f.input :landlord_rating %>
+      <%= f.input :rental_cost %>
+      <%= f.input :communication %>
+      <%= f.input :cleanliness %>
+      <%= f.button :submit, class:"btn btn-submit" %>
+    </div>
+    <div class="form-actions">
+    </div>
+  <% end %>
+</div>
