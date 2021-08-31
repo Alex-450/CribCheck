@@ -1,6 +1,6 @@
 const button = document.getElementById('showHide')
 
-const showHide = () => {
+const showForm = () => {
   button.addEventListener('click', (event) => {
     var x = document.getElementById("landlordForm")
   if (x.style.display === "none") {
@@ -8,6 +8,7 @@ const showHide = () => {
     } else {
       x.style.display = "none";
     }
+  button.style.display = "none";
 })}
 
-export { showHide }
+export { showForm }
