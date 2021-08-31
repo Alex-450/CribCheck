@@ -1,0 +1,27 @@
+.card-index{
+  background-color: $light-green;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.card-index > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-index > h2
+.card-index > p {
+  color: $dark-green;
+}
+
+h2, p {
+  padding: 0 5px;
+}
+
+.card-index .btn-submit {
+    left: 50%;
+    bottom: 0;
+    transform: translate(50%, 50%);
+}
