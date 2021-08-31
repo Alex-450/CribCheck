@@ -29,6 +29,10 @@
 
 i {
   color: $dark-green;
+  &:hover{
+    color: $green;
+  }
+
 }
 li {
   padding: 0 10px;
