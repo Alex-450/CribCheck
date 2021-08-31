@@ -27,9 +27,11 @@ import { navBarToggleMenu } from '../components/navbar';
 import "bootstrap";
 import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
+import { showHide } from '../components/showHide';
 
 document.addEventListener('turbolinks:load', () => {
   navBarToggleMenu();
   initSelect2();
   initMapbox();
+  showHide();
 });

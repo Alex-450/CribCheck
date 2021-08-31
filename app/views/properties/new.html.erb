@@ -1,14 +1,15 @@
-<%= javascript_pack_tag 'showHide' %>
 <div class="container">
+  <h1>Add a new property</h1>
   <div class="row">
-   <h1>Add a new property</h1>
-    <button onClick="showHide()">Can't find your landlord?</button>
-    <div class="col" id="propertyForm">
+    <div class="col" id="propertyForm" style="display:block;">
       <%= simple_form_for @property do |f| %>
         <%= f.association :landlord, input_html: { class: 'select2Landlord' } %>
         <%= f.input :address, placeholder: "3138 Johnstown Road Chicago" %>
         <%= f.button :submit, class: "btn btn-primary" %>
       <% end %>
+    </div>
+    <div class="col">
+    <button id="showHide">Can't find your landlord?</button>
     </div>
     <div class="col" id="landlordForm" style="display:none;">
       <h4>Create a new landlord</h4>
