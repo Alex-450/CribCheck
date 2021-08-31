@@ -10,9 +10,8 @@
     </div>
     <div class="col" id="propertyForm" style="display:block;">
       <%= simple_form_for @property do |f| %>
-        <%= f.input :address, placeholder: "3138 Johnstown Road Chicago", input_html: { id: 'property-address' } %>
         <%= f.association :landlord, input_html: { class: 'select2Landlord' } %>
-        <%= f.input :address, placeholder: "3138 Johnstown Road Chicago" %>
+        <%= f.input :address, placeholder: "3138 Johnstown Road Chicago", input_html: { id: 'property-address' } %>
         <%= f.button :submit, class: "btn btn-primary" %>
       <% end %>
     </div>
