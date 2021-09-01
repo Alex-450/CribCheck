@@ -12,7 +12,7 @@
 
 .home-grid{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 5px;
   justify-items: center;
 }
@@ -29,4 +29,6 @@ footer {
  position: absolute;
  bottom: 0;
  width: 100%;
+body{
+  background-color: $light-green;
 }

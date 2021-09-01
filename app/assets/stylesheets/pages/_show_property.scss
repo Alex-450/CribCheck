@@ -1,0 +1,22 @@
+#property-container {
+  margin-top: 7rem;
+
+  .prop-info {
+    font-weight: bold;
+  }
+
+  a {
+    width: 300px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .property-card-review {
+    margin: 0 auto;
+    background-color: $green;
+    width: 80%;
+    color: white;
+  }
+}
