@@ -8,7 +8,6 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-import { navBarToggleMenu } from '../components/navbar';
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -27,6 +26,9 @@ import { navBarToggleMenu } from '../components/navbar';
 import "bootstrap";
 import { initSelect2 } from '../components/init_select2';
 import { navBarToggleMenu } from '../components/navbar';
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { initUpdateBtnOnScroll } from '../components/navbar';
+import { initUpdateMenuOnScroll } from '../components/navbar';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 
@@ -37,4 +39,7 @@ document.addEventListener('turbolinks:load', () => {
   initSelect2();
   initMapbox();
   initAutocomplete();
+  initUpdateNavbarOnScroll();
+  initUpdateBtnOnScroll();
+  initUpdateMenuOnScroll();
 });
