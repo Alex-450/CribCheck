@@ -31,6 +31,7 @@ import { initUpdateMenuOnScroll } from '../components/navbar';
 import { initMapbox } from '../plugins/init_mapbox';
 import { showForm } from '../components/showForm';
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { clickRow } from "../components/table_row_slect";
 
 document.addEventListener('turbolinks:load', () => {
   navBarToggleMenu();
@@ -41,4 +42,5 @@ document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
   initUpdateBtnOnScroll();
   initUpdateMenuOnScroll();
+  clickRow();
 });

@@ -1,4 +1,8 @@
 class LandlordsController < ApplicationController
+  def index
+    @landlords = Landlord.all
+  end
+
   def new
     @landlord = Landlord.new
   end
