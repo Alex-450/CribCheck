@@ -24,9 +24,11 @@
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
   cursor: pointer;
+  opacity: 1;
+
 
   &:hover{
-    background-color: $light-green;
     color: $green;
+    opacity: 0.6;
   }
 }
