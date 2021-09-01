@@ -16,6 +16,7 @@
   // transform: translateY(-1px);
   }
 }
+
 .btn-submit {
   background-color: $green;
   color: $light-green;
@@ -25,7 +26,6 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   opacity: 1;
-
 
   &:hover{
     color: $green;
