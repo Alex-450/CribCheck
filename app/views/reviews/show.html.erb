@@ -10,7 +10,7 @@
           <tbody>
           <%# Landlord %>
             <tr class="tr-height">
-              <td colspan="100%" class="bold py-2">Landlord average rating:</td>
+              <td colspan="100%" class="bold py-2 d-green">Landlord average rating:</td>
             </tr>
             <tr class="tr-height">
             <% @review.landlord_rating.times do %>
@@ -23,7 +23,7 @@
             </tr>
             <%# property %>
             <tr class="tr-height">
-              <td colspan="100%" class="bold py-2">Property average rating:</td>
+              <td colspan="100%" class="bold py-2 d-green">Property average rating:</td>
             </tr>
             <tr class="tr-height">
             <% @review.property_rating.times do %>
@@ -36,7 +36,7 @@
             </tr>
           <%# communication %>
             <tr class="tr-height">
-              <td colspan="100%" class="bold py-2">Communication:</td>
+              <td colspan="100%" class="bold py-2 d-green">Communication:</td>
             </tr>
             <tr class="tr-height">
             <% @review.communication.times do %>
@@ -49,7 +49,7 @@
             </tr>
             <%# cleanliness %>
             <tr class="tr-height">
-              <td colspan="100%" class="bold py-2">Cleanliness:</td>
+              <td colspan="100%" class="bold py-2 d-green">Cleanliness:</td>
             </tr>
             <tr class="tr-height">
             <% @review.cleanliness.times do %>
@@ -65,13 +65,13 @@
       </div>
     </section>
     <section class="comments d-flex justify-content-between m-3 p-3">
-      <p class="bold">About the landlord:</p>
-      <%= @review.landlord_comment %>
-      <p class="mt-3 bold">About the property:</p>
-      <p class="dark-green"><%= @review.property_comment %> </p>
+      <p class="bold d-green">About the landlord:</p>
+      <p class="d-green"><%= @review.landlord_comment %></p>
+      <p class="mt-3 bold d-green">About the property:</p>
+      <p class="d-green"><%= @review.property_comment %> </p>
       <div class="d-flex">
-        <p class="bold">Average rent:</p>
-       <p>€<%= @review.rental_cost %>,-</p>
+        <p class="bold d-green mt-1">Average rent:</p>
+        <p class="d-green">€<%= @review.rental_cost %>,-</p>
       </div>
     </section>
     <%= link_to 'Contact', "#", class: 'btn btn-action' %>
