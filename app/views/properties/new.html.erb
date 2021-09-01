@@ -14,9 +14,11 @@
       <h4>Please select your landlord</h4>
       <%= simple_form_for @property do |f| %>
         <%= f.association :landlord, input_html: { class: 'select2Landlord' } %>
-        <%# <h4>Add your property address</h4>
-        <%= f.input :address, placeholder: "3138 Johnstown Road Chicago", input_html: { id: 'property-address' } %>
-        <%# <%= f.button :submit, class: "btn btn-submit" %>
+        <div id="propertyAddress" style="display:none;">
+          <h4>Add your property address</h4>
+          <%= f.input :address, placeholder: "3138 Johnstown Road Chicago", input_html: { id: 'property-address' } %>
+          <%= f.button :submit, class: "btn btn-submit" %>
+        </div>
       <% end %>
       <button id="showHide" style="display:block;" class="btn btn-action">Can't find your landlord?</button>
     </div>
