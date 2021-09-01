@@ -11,6 +11,8 @@
 .green-table td, th {
   text-align: left;
   padding: 8px;
+  border: 1px solid $dark-green;
+
 }
 
 .green-table th {
@@ -27,6 +29,10 @@
 
 .green-table tr:nth-child(even) {
   background-color: $light-green;
+}
+
+.green-table tbody {
+  background-color: white;
 }
 
 .green-table tbody > tr:hover {
