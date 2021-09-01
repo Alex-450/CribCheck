@@ -1,5 +1,9 @@
 class ReviewsController < ApplicationController
-  before_action :set_user_profile, only: [:new]
+  before_action :set_user_profile, only: [:new, :show]
+
+  def show
+    @review = Review.find(params[:id])
+  end
 
   def new
     @property = Property.find(params[:property_id])

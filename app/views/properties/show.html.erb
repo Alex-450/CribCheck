@@ -1,8 +1,25 @@
-<div class="container">
+<div id="property-container" class="container">
   <div class="row">
-    <div class="col">
+    <div class="col-7 card-show">
+      <%= image_tag "house.png" %>
       <h1><%= @property.address %></h1>
-      <%= link_to 'Back', properties_path %>
+      <p><span class="prop-info">Landlord:</span> TODO</p>
+      <p><span class="prop-info">Overall score:</span> TODO ★</p>
+      <p><span class="prop-info">Reviews:</span> TODO</p>
+      <div class='property-card-review'>
+        <p>review 1</p>
+      </div>
+      <div class='property-card-review'>
+        <p>review 2</p>
+      </div>
+      <div class='property-card-review'>
+        <p>review 3</p>
+      </div>
+      <div>
+        <%= link_to 'Leave review', properties_path, class: 'btn-action' %>
+      </div>
+
+
     </div>
   </div>
 </div>
