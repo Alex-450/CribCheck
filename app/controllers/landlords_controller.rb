@@ -1,4 +1,8 @@
 class LandlordsController < ApplicationController
+  def index
+    @landlords = Landlord.all
+  end
+
   def new
     @landlord = Landlord.new
   end
@@ -6,7 +10,7 @@ class LandlordsController < ApplicationController
   def create
     @landlord = Landlord.new(landlord_params)
     if @landlord.save
-      redirect_to landlord_path(@landlord)
+      redirect_to new_property_path
     else
       render :new
     end

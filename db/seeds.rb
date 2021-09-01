@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Creating properties..."
+10.times do
+  Property.create(user_id: 1, landlord_id: 1, address: "Eiffel Tower Paris")
+end
+puts "Done!"

@@ -1,0 +1,43 @@
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+thead > tr > th {
+  background-color: $dark-green;
+  color: white;
+}
+
+td, th {
+  border: 1px solid $dark-green;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  color: $green;
+}
+
+td a {
+  color: $green;
+  &:hover {
+    color: $dark-green;
+    text-decoration: none;
+  }
+}
+
+tr:nth-child(even) {
+  background-color: $light-green;
+}
+
+tbody > tr:hover {
+  color: white;
+  background-color: $green;
+  cursor: pointer;
+  a {
+    color: white;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}

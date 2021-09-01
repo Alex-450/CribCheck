@@ -1,5 +1,4 @@
 class PropertiesController < ApplicationController
-
   def index
     @properties = Property.all
 
@@ -18,6 +17,7 @@ class PropertiesController < ApplicationController
 
   def new
     @property = Property.new
+    @landlord = Landlord.new
   end
 
   def create

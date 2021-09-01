@@ -8,7 +8,6 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
@@ -30,16 +29,18 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initUpdateBtnOnScroll } from '../components/navbar';
 import { initUpdateMenuOnScroll } from '../components/navbar';
 import { initMapbox } from '../plugins/init_mapbox';
+import { showForm } from '../components/showForm';
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { clickRow } from "../components/table_row_slect";
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
   navBarToggleMenu();
   initSelect2();
   initMapbox();
+  showForm();
   initAutocomplete();
   initUpdateNavbarOnScroll();
   initUpdateBtnOnScroll();
   initUpdateMenuOnScroll();
+  clickRow();
 });
