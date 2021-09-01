@@ -43,11 +43,11 @@
   width: 20% ;
 }
 
-tr {
+.tr-height {
   height: 20px;
 }
 
-table{
+.table-width{
   width: 100%;
 }
 
@@ -57,12 +57,12 @@ table{
 
 
 
-table tr td:first-child {
+.table-width tr td:first-child {
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
 
-table tr td:last-child {
+.table-width tr td:last-child {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }

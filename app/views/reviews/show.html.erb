@@ -3,16 +3,16 @@
     <img src="<%= asset_path('house.png') %>" alt=""> <br>
     <section class="score d-flex justify-content-center m-3">
       <div class="score-card">
-        <table class="no-border">
+        <table class="no-border table-width">
           <%# <thead>
             <th colspan="100%">Landlord average rating:</th>
           </thead> %>
           <tbody>
           <%# Landlord %>
-            <tr>
+            <tr class="tr-height">
               <td colspan="100%" class="bold py-2">Landlord average rating:</td>
             </tr>
-            <tr>
+            <tr class="tr-height">
             <% @review.landlord_rating.times do %>
               <td class="td-call"></td>
               <% end %>
@@ -22,10 +22,10 @@
               <% end %>
             </tr>
             <%# property %>
-            <tr>
+            <tr class="tr-height">
               <td colspan="100%" class="bold py-2">Property average rating:</td>
             </tr>
-            <tr>
+            <tr class="tr-height">
             <% @review.property_rating.times do %>
               <td class="td-call"></td>
               <% end %>
@@ -35,10 +35,10 @@
               <% end %>
             </tr>
           <%# communication %>
-            <tr>
+            <tr class="tr-height">
               <td colspan="100%" class="bold py-2">Communication:</td>
             </tr>
-            <tr>
+            <tr class="tr-height">
             <% @review.communication.times do %>
               <td class="td-call"></td>
               <% end %>
@@ -48,10 +48,10 @@
               <% end %>
             </tr>
             <%# cleanliness %>
-            <tr>
+            <tr class="tr-height">
               <td colspan="100%" class="bold py-2">Cleanliness:</td>
             </tr>
-            <tr>
+            <tr class="tr-height">
             <% @review.cleanliness.times do %>
               <td class="td-call"></td>
               <% end %>
