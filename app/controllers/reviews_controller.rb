@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :set_user_profile, only: [:new, :show]
 
+
   def show
     @review = Review.find(params[:id])
   end
@@ -31,6 +32,7 @@ class ReviewsController < ApplicationController
       :property_comment,
       :rental_cost,
       :communication,
+      :photos,
       :cleanliness)
   end
 
