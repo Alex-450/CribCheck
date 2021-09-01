@@ -3,24 +3,34 @@
       <h1>Add a new property</h1>
     </div>
   <div class="row px-5 justify-content-center">
-  <div class="col-6 text-center" id="landlordForm" style="display:none;">
-      <h4>Create a new landlord</h4>
-      <%= simple_form_for @landlord do |f| %>
-        <%= f.input :name, placeholder: "e.g. John Doe" %>
-        <%= f.button :submit, class: "btn btn-submit" %>
-      <% end %>
-    </div>
-    <div class="col-6" id="propertyForm" style="display:block;">
-      <h4>Please select your landlord</h4>
-      <%= simple_form_for @property do |f| %>
-        <%= f.association :landlord, input_html: { class: 'select2Landlord' } %>
-        <div id="propertyAddress" style="display:none;">
-          <h4>Add your property address</h4>
-          <%= f.input :address, placeholder: "3138 Johnstown Road Chicago", input_html: { id: 'property-address' } %>
-          <%= f.button :submit, class: "btn btn-submit" %>
+  <div class="col-6 col-md-6" id="landlordForm" style="display:none;">
+      <div class="card green-card">
+      <div class="card-header bg-green">Add a new property</div>
+        <div class="card-body">
+          <h5>Create a new landlord</h5>
+          <%= simple_form_for @landlord do |f| %>
+            <%= f.input :name, placeholder: "e.g. John Doe" %>
+            <%= f.button :submit, class: "btn btn-submit" %>
+          <% end %>
         </div>
-      <% end %>
-      <button id="showHide" style="display:block;" class="btn btn-action">Can't find your landlord?</button>
+      </div>
+    </div>
+    <div class="col-12 col-md-6" id="propertyForm" style="display:block;">
+      <div class="card green-card">
+      <div class="card-header bg-green">Add a new property</div>
+        <div class="card-body">
+          <h5>Please select your landlord</h5>
+          <%= simple_form_for @property do |f| %>
+            <%= f.association :landlord, input_html: { class: 'select2Landlord' } %>
+            <div id="propertyAddress" style="display:none;">
+              <h4>Add your property address</h4>
+              <%= f.input :address, placeholder: "3138 Johnstown Road Chicago", input_html: { id: 'property-address' } %>
+              <%= f.button :submit, class: "btn btn-submit" %>
+            </div>
+          <% end %>
+          <button id="showHide" style="display:block;" class="btn btn-action">Can't find your landlord?</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
