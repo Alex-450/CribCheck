@@ -3,22 +3,21 @@
   justify-content: center;
 }
 
-thead > tr > th {
+.green-table thead > tr > th {
   background-color: $dark-green;
   color: white;
 }
 
-td, th {
-  border: 1px solid $dark-green;
+.green-table td, th {
   text-align: left;
   padding: 8px;
 }
 
-th {
+.green-table th {
   color: $green;
 }
 
-td a {
+.green-table td a {
   color: $green;
   &:hover {
     color: $dark-green;
@@ -26,11 +25,11 @@ td a {
   }
 }
 
-tr:nth-child(even) {
+.green-table tr:nth-child(even) {
   background-color: $light-green;
 }
 
-tbody > tr:hover {
+.green-table tbody > tr:hover {
   color: white;
   background-color: $green;
   cursor: pointer;
