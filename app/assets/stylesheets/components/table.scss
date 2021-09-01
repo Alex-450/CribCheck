@@ -3,6 +3,11 @@
   justify-content: center;
 }
 
+thead > tr > th {
+  background-color: $green;
+  color: white;
+}
+
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
