@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :properties do
     resources :reviews, only: [:create, :new, :show]
   end
-  resources :landlords, only: [:create, :new, :show]
+  resources :landlords, only: [:create, :new, :show, :index]
   resources :reviews, only: [:destroy]
 end

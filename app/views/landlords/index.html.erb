@@ -1,0 +1,27 @@
+<div class="container-fluid px-0">
+    <div class="jumbotron jumbotron-fluid justify-content-center jumbotron-header">
+      <h1>Landlords</h1>
+    </div>
+  <div class="row">
+    <div class="col justify-content-center">
+      <table>
+        <thead>
+          <tr>
+            <th>Landlord name</th>
+            <th>Number of properties</th>
+            <th>Average rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @landlords.each do |landlord| %>
+            <tr data-link="<%= landlord_path(landlord) %>">
+              <td><%= landlord.name %></td>
+              <td><%= landlord.properties.count %></td>
+              <td>RATING (TODO)</td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
