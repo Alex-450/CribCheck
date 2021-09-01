@@ -15,7 +15,30 @@
 #properties-container {
   margin-top: 5rem;
 
+  .cards-index {
+    margin: -1rem;
+  }
+
   .card-index {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 2rem;
+
+    :nth-last-child(2) {
+      flex-grow: 1;
+    }
+
+    .btn-submit {
+      align-self: center;
+      margin-bottom: -1rem;
+    }
   }
+
+  .card-index .btn-submit {
+    left: auto;
+    bottom: auto;
+    transform: none;
+}
+
 }

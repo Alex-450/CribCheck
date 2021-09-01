@@ -1,11 +1,11 @@
 <div id="properties-container" class="container mr-1 mw-100">
   <div class="row">
 
-    <div id="properties-index" class="col-12 col-md-6 col-lg-6 mt-1">
+    <div id="properties-index" class="col-12 col-md-6 col-lg-6">
       <h1>Properties</h1>
-      <div class="d-flex flex-wrap m-n2">
+      <div class="cards-index d-flex flex-wrap">
         <% @properties.each do |property| %>
-          <%= link_to property_path(property), class: "card-index text-center d-block m-2" do %>
+          <%= link_to property_path(property), class: "card-index" do %>
             <%= image_tag "house.png" %>
             <p> <%= property.address %></p>
             <p>Landlord: John Doe</p>
