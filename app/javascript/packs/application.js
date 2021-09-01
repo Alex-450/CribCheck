@@ -24,10 +24,13 @@ require("channels")
 // External imports
 import "bootstrap";
 import { initSelect2 } from '../components/init_select2';
+import { navBarToggleMenu } from '../components/navbar';
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { initUpdateBtnOnScroll } from '../components/navbar';
+import { initUpdateMenuOnScroll } from '../components/navbar';
 import { initMapbox } from '../plugins/init_mapbox';
 import { showForm } from '../components/showForm';
 import { initAutocomplete } from '../plugins/init_autocomplete';
-import { navBarToggleMenu } from '../components/navbar';
 
 document.addEventListener('turbolinks:load', () => {
   navBarToggleMenu();
@@ -35,4 +38,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   showForm();
   initAutocomplete();
+  initUpdateNavbarOnScroll();
+  initUpdateBtnOnScroll();
+  initUpdateMenuOnScroll();
 });
