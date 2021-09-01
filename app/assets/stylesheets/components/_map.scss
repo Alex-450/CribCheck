@@ -1,3 +1,27 @@
 .mapboxgl-popup-content {
   text-align: center;
 }
+
+$navbar-height: 120px;
+
+
+#map-container {
+  padding-top: 1rem;
+}
+
+#map {
+  height: 600px;
+}
+
+@include media-breakpoint-up(md) {
+  #map-container {
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    padding-top: $navbar-height;
+  }
+  #map {
+    height: 100%;
+  }
+}
