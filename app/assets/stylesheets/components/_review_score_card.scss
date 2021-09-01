@@ -1,0 +1,68 @@
+// General card
+.padding-200 {
+  padding-top: 150px;
+}
+
+.card-show-review{
+  background-color: $white;
+  width: 80%;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.comments{
+  flex-direction: column;
+}
+
+.card-show-review .btn-action {
+    left: 50%;
+    bottom: 0;
+    transform: translate(350%, 50%);
+}
+
+.card-show-review > img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.dark-green{
+  color: $dark-green;
+}
+// Score card
+
+.td-call  {
+  background-color: $call-to-action;
+  width: 20% ;
+
+}
+
+.td-green {
+  background-color: $green;
+  width: 20% ;
+}
+
+tr {
+  height: 20px;
+}
+
+table{
+  width: 100%;
+}
+
+.score-card {
+  width: 400px;
+}
+
+
+
+table tr td:first-child {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+table tr td:last-child {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
