@@ -3,4 +3,5 @@ class Review < ApplicationRecord
   belongs_to :user
   has_many :chatrooms
   has_one :landlord, through: :properties
+  has_many_attached :photos
 end
