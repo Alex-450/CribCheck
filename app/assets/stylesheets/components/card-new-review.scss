@@ -23,9 +23,23 @@
 .card-new-review {
   width: 600px;
   background-color: $white;
-  padding: 10px;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-new-header {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  background-color: $green;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-new-body {
+  width: 100%;
+  padding: 10px;
 }
 
 input[type=range] {
