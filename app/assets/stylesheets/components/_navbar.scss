@@ -1,6 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
   background-color: transparent;
+  box-shadow: 2px 2px white;
+  padding-bottom: 16px;
+}
+
+.navbar-logo {
+  width: 200px;
 }
 
 .navbar-lewagon-white {

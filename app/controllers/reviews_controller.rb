@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
     @review.property = @property
     @review.user = current_user
     if @review.save
-      redirect_to root_path
+      redirect_to property_path(@property)
     else
       render :new
     end
