@@ -58,9 +58,17 @@
 
   i {
     color: white;
+    padding-left: 2px;
   }
 
-  button {
+  .btn-search {
+    color: $white;
+    border: none;
     background-color: $call-to-action;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
