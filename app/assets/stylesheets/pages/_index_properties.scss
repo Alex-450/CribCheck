@@ -1,16 +1,16 @@
-#properties-index {
-  a {
-    color: $dark-green;
-  }
+// #properties-index {
+//   a {
+//     color: $dark-green;
+//   }
 
-  a:hover {
-    text-decoration: none;
-  }
+//   a:hover {
+//     text-decoration: none;
+//   }
 
-  .btn-submit {
-    width: 150px;
-  }
-}
+//   .btn-submit {
+//     width: 150px;
+//   }
+// }
 
 #properties-container {
   margin-top: 5rem;
@@ -20,6 +20,8 @@
   }
 
   .card-index {
+    color: $dark-green;
+    text-decoration: none;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -40,6 +42,11 @@
     bottom: auto;
     transform: none;
   }
+
+  header {
+    background-color: $light-green;
+    z-index: 1;
+  }
 }
 
 #query {
@@ -51,7 +58,7 @@
 
 .search {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 
   input, button {
     height: 40px;
