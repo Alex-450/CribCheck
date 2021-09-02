@@ -45,6 +45,8 @@
 #query {
   width: 300px;
   margin-bottom: 16px;
+  border: $call-to-action;
+  border-style: solid none solid solid;
 }
 
 .search {
@@ -52,8 +54,9 @@
   justify-content: flex-start;
 
   input, button {
-    height: 30px;
+    height: 40px;
     color: white;
+    margin: 8px 0;
   }
 
   i {
