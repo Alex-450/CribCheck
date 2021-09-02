@@ -33,18 +33,19 @@
 // Score card
 
 .td-call  {
-  background-color: $call-to-action;
+  background-color: $dark-green;
   width: 20% ;
 
 }
 
 .td-green {
-  background-color: $green;
+  background-color: $white;
   width: 20% ;
 }
 
 .tr-height {
   height: 20px;
+  border: 1px solid $dark-green;
 }
 
 .table-width{
