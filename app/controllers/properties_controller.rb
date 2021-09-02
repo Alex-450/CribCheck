@@ -1,4 +1,6 @@
 class PropertiesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+
   def index
     @properties = Property.all
 
@@ -13,6 +15,7 @@ class PropertiesController < ApplicationController
 
   def show
     @property = Property.find(params[:id])
+    @property.user = current_user
   end
 
   def new
