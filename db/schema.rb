@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_01_145035) do
+ActiveRecord::Schema.define(version: 2021_09_02_132439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,14 +83,14 @@ ActiveRecord::Schema.define(version: 2021_09_01_145035) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "landlord_rating"
-    t.integer "property_rating"
+    t.integer "landlord_rating", default: 3
+    t.integer "property_rating", default: 3
     t.text "landlord_comment"
     t.text "property_comment"
     t.integer "rental_cost"
-    t.integer "communication"
-    t.integer "maintenance"
-    t.integer "cleanliness"
+    t.integer "communication", default: 3
+    t.integer "maintenance", default: 3
+    t.integer "cleanliness", default: 3
     t.bigint "property_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
