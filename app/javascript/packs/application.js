@@ -33,6 +33,7 @@ import { showForm } from '../components/showForm';
 import { showAddressInput } from "../components/showAddressInput";
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { clickRow } from "../components/table_row_select";
+import { showAddReview } from '../components/new_review';
 
 document.addEventListener('turbolinks:load', () => {
   navBarToggleMenu();
@@ -45,6 +46,7 @@ document.addEventListener('turbolinks:load', () => {
   initUpdateMenuOnScroll();
   clickRow();
   showAddressInput();
+  showAddReview();
 });
 
 import "controllers"

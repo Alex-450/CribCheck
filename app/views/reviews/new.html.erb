@@ -44,6 +44,7 @@
           <input type="range" min="1" max="5" value="2" class="range" data-target="range-slider-communication.range" data-action="input->range-slider-communication#updateValue">
           <%= f.input :communication, as: :hidden, input_html: { data: { target: "range-slider-communication.hidden"}}, collection: 0..5 %>
         </div>
+
         <%# cleanliness %>
         <p class="bold">cleanliness:</p>
         <div class="numbers d-flex  justify-content-between">

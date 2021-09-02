@@ -16,6 +16,7 @@ class PropertiesController < ApplicationController
   def show
     @property = Property.find(params[:id])
     @property.user = current_user
+    @review = Review.new
   end
 
   def new
