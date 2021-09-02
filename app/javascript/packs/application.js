@@ -46,3 +46,5 @@ document.addEventListener('turbolinks:load', () => {
   clickRow();
   showAddressInput();
 });
+
+import "controllers"

@@ -13,9 +13,15 @@
             <div class="review-first-row">
               <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png"/>
               <p>
+              <% if f.property_rating.nil? %>
+                <% 5.times do %>
+                  <i class="fas fa-star black"></i>
+                <% end %>
+              <% else %>
                 <% f.property_rating.times do %>
                   <i class="fas fa-star black"></i>
                 <% end %>
+              <% end %>
               </p>
             </div>
               <p class="review-second-row"><strong><%= f.property_comment %></strong></p>
