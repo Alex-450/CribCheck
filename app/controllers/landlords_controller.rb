@@ -6,7 +6,7 @@ class LandlordsController < ApplicationController
   def create
     @landlord = Landlord.new(landlord_params)
     if @landlord.save
-      redirect_to new_property_path
+      redirect_to new_property_path(id: @landlord.id)
     else
       render 'properties/new'
     end
