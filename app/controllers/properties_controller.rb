@@ -18,6 +18,7 @@ class PropertiesController < ApplicationController
   def new
     @property = Property.new
     @landlord = Landlord.new
+    @review = Review.new
   end
 
   def create
