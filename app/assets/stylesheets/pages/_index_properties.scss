@@ -1,19 +1,12 @@
-// #properties-index {
-//   a {
-//     color: $dark-green;
-//   }
-
-//   a:hover {
-//     text-decoration: none;
-//   }
-
-//   .btn-submit {
-//     width: 150px;
-//   }
-// }
-
 #properties-container {
-  margin-top: 5rem;
+
+  header {
+    color: white;
+    background-color: $light-green;
+    z-index: 1;
+    padding-top: 200px;
+    padding-bottom: 3rem;
+  }
 
   .cards-index {
     margin: -1rem;
@@ -41,11 +34,6 @@
     left: auto;
     bottom: auto;
     transform: none;
-  }
-
-  header {
-    background-color: $light-green;
-    z-index: 1;
   }
 }
 
