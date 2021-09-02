@@ -19,7 +19,7 @@
                 <p class="bold">5</p>
               </div>
               <div data-controller="range-slider-landlord">
-                <input type="range" min="1" max="5" value="2" class="range" id="range" data-target="range-slider-landlord.range" data-action="input->range-slider-landlord#updateValue">
+                <input type="range" min="1" max="5" value="3" class="range" id="range" data-target="range-slider-landlord.range" data-action="input->range-slider-landlord#updateValue">
                 <%= f.input :landlord_rating, as: :hidden, input_html: { data: { target: "range-slider-landlord.hidden"}}, collection: 0..5 %>
               </div>
               <%# Property rating %>
@@ -32,7 +32,7 @@
                 <p class="bold">5</p>
               </div>
               <div data-controller="range-slider-property">
-                <input type="range" min="1" max="5" value="2" class="range" data-target="range-slider-property.range" data-action="input->range-slider-property#updateValue">
+                <input type="range" min="1" max="5" value="3" class="range" data-target="range-slider-property.range" data-action="input->range-slider-property#updateValue">
                 <%= f.input :property_rating, as: :hidden, input_html: { data: { target: "range-slider-property.hidden"}}, collection: 0..5 %>
               </div>
               <%# Communication %>
@@ -45,7 +45,7 @@
                 <p class="bold">5</p>
               </div>
               <div data-controller="range-slider-communication">
-                <input type="range" min="1" max="5" value="2" class="range" data-target="range-slider-communication.range" data-action="input->range-slider-communication#updateValue">
+                <input type="range" min="1" max="5" value="3" class="range" data-target="range-slider-communication.range" data-action="input->range-slider-communication#updateValue">
                 <%= f.input :communication, as: :hidden, input_html: { data: { target: "range-slider-communication.hidden"}}, collection: 0..5 %>
               </div>
               <%# cleanliness %>
@@ -58,7 +58,7 @@
                 <p class="bold">5</p>
               </div>
               <div data-controller="range-slider-cleanliness">
-                <input type="range" min="1" max="5" value="2" class="range" data-target="range-slider-cleanliness.range" data-action="input->range-slider-cleanliness#updateValue">
+                <input type="range" min="1" max="5" value="3" class="range" data-target="range-slider-cleanliness.range" data-action="input->range-slider-cleanliness#updateValue">
                 <%= f.input :cleanliness, as: :hidden, input_html: { data: { target: "range-slider-cleanliness.hidden"}}, collection: 0..5 %>
               </div>
               <%= f.input :landlord_comment, placeholder: "Type your review..." , :label_html => { :class => 'bold text-input' }%>
