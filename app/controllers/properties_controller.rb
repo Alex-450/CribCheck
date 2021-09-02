@@ -24,7 +24,11 @@ class PropertiesController < ApplicationController
   def create
     @property = Property.create(property_params)
     @property.user = current_user
-    render :new if !@property.save
+    if @property.save
+      redirect_to new_property_review_path(@property)
+    else
+      render :new
+    end
   end
 
   private

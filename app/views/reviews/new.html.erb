@@ -1,4 +1,7 @@
-<div class="container">
+<div class="container-fluid px-0">
+<div class="jumbotron jumbotron-fluid justify-content-center jumbotron-header">
+    <h1>Review your new property</h1>
+  </div>
   <%= simple_form_for [@property, @review] do |f| %>
     <div class="form-inputs">
       <%= f.input :landlord_comment, placeholder: "Type your review..." %>
