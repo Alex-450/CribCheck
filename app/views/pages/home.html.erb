@@ -1,23 +1,30 @@
-<div class="banner">
+<div class="banner d-flex flex-column">
 
   <div class="banner-text p-3">
-    <h1 class="d-green bold">Check out your future appatment </h1>
-    <h1 class="green semi-bold">No more surprises</h1>
-    <h1 class="green semi-bold">This is how it works!</h1>
+    <h1 class="d-green bold">Check out your future apartment</h1>
+    <%= form_tag properties_path, class:"d-flex search", method: :get do %>
+      <%= text_field_tag :query, nil, placeholder: "Search...", class:"form-tag"%>
+      <button type="submit" class="btn btn-search">
+        Search <%= icon('fas', 'search') %>
+      </button>
+    <% end %>
   </div>
 
-  <div class="how-it-works d-flex justify-content-around">
-    <div class="step">
-      <img src="<%= asset_path('house.svg')  %>" alt="">
-      <h2 class="semi-bold"> Search</h2>
-    </div>
-    <div class="step">
-      <img src="<%= asset_path('select.svg')  %>" alt="">
-      <h2 class="semi-bold">Select</h2>
-    </div>
-    <div class="step">
-      <img src="<%= asset_path('review.svg')  %>" alt="">
-      <h2 class="semi-bold">Review</h2>
+  <div class="how-it-works d-flex flex-column justify-content-center align-items-center">
+    <h2 class="green semi-bold">This is how it works!</h2>
+    <div class="d-flex justify-content-around align-items-center">
+      <div class="step">
+        <img src="<%= asset_path('house.svg')  %>" alt="">
+        <p class="semi-bold"> Search</p>
+      </div>
+      <div class="step">
+        <img src="<%= asset_path('select.svg')  %>" alt="">
+        <p class="semi-bold">Select</p>
+      </div>
+      <div class="step">
+        <img src="<%= asset_path('review.svg')  %>" alt="">
+        <p class="semi-bold">Review</p>
+      </div>
     </div>
   </div>
 

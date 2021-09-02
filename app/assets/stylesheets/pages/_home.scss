@@ -2,12 +2,13 @@
 .banner {
   height: 95vh;
   background-color: $light-green;
-  padding-top: 100px;
+  padding-top: 150px;
+  justify-content: flex-start;
 }
 
 .step > img {
-  width: 200px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
 }
 
 .home-grid{
@@ -32,4 +33,46 @@ footer {
 }
 body{
   background-color: $light-green;
+}
+
+.search {
+  display: block;
+  width: 500px;
+
+  .btn-search {
+    color: $white;
+    border: none;
+    background-color: $call-to-action;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+
+  #query {
+    width: 400px;
+    height: 40px;
+    border: $call-to-action;
+    border-style: solid none solid solid;
+  }
+
+  i {
+    color: white;
+  }
+}
+
+.banner-text {
+  margin-left: 9rem;
+
+  h1 {
+    font-size: 2rem;
+    margin: 16px 0;
+  }
+}
+
+.how-it-works {
+  margin-top: 6rem;
+
+   h2 {
+    font-size: 1.5rem;
+    margin-top: 8px;
+  }
 }
