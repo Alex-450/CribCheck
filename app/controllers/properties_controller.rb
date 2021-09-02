@@ -18,13 +18,14 @@ class PropertiesController < ApplicationController
   def new
     @property = Property.new
     @landlord = Landlord.new
+    @review = Review.new
   end
 
   def create
     @property = Property.create(property_params)
     @property.user = current_user
     if @property.save
-      redirect_to property_path(@property)
+      redirect_to new_property_review_path(@property)
     else
       render :new
     end
