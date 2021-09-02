@@ -32,15 +32,16 @@
       <% end %>
 
       <div class="review-link">
-        <%= link_to 'Leave review', "#", class: 'btn-action', id:'new-review' %>
+        <button id="new-review" class="btn btn-action">leave review</button>
       </div>
     </div>
   </div>
 
-  <div class="card-new-review">
+  <div class="card-new-review" id="toggle-review" style="display:none;">
     <%= simple_form_for [@property, @review] do |f| %>
       <div class="form-inputs">
         <%# Landlord rating %>
+        <div class="card-new-header bold justify-content-center">Add a review</div>
         <p class="bold">Landlord rating:</p>
         <div class="numbers d-flex  justify-content-between">
           <p class="bold">1</p>
