@@ -1,8 +1,8 @@
-const showAddReview = () => {
+const newReview = () => {
   const element = document.querySelector("#new-review");
   const div = document.querySelector("#toggle-review");
   element.addEventListener("click", (e) => {
-    e.preventDefault
+    // e.preventDefault
     if (div.style.display !== "none") {
     div.style.display = "none";
     } else {
@@ -11,4 +11,4 @@ const showAddReview = () => {
   });
 }
 
-export { showAddReview };
+export { newReview };

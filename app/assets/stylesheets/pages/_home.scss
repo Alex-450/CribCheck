@@ -1,8 +1,41 @@
 // Specific CSS for your home-page
 .banner {
-  height: 95vh;
   background-color: $light-green;
   padding-top: 100px;
+  position: relative;
+  z-index: 1;
+  margin-top: 40px
+}
+
+.apartment-section{
+  margin: 40px auto;
+}
+
+.buttons {
+  z-index: 2;
+}
+
+.banner-text > p {
+  font-size: 45px;
+}
+#home1{
+  position: absolute;
+  top: 105px;
+  right: -200px;
+  z-index: -100;
+}
+#home2{
+  position: absolute;
+  top: 400px;
+  left: -10px;
+  z-index: -100;
+}
+#home3{
+  position: absolute;
+  top: 700px;
+  right: -50px;
+  z-index: -100;
+
 }
 
 .step > img {
@@ -29,13 +62,14 @@ footer {
  position: absolute;
  bottom: 0;
  width: 100%;
+ z-index: 1;
 }
 body{
   background-color: $light-green;
 }
 
 .homepage-reviews {
-  margin: 0 auto;
+  margin: 40px auto;
   display: flex;
   justify-content: space-around;
   align-items: center;

@@ -33,8 +33,10 @@ import { showForm } from '../components/showForm';
 import { showAddressInput } from "../components/showAddressInput";
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { clickRow } from "../components/table_row_select";
-import { showAddReview } from '../components/new_review';
+import { newReview } from '../components/new_review';
 import { setSelectValue } from '../components/set_select_value'
+// import { loadDynamicBannerText } from '../components/banner';
+
 
 document.addEventListener('turbolinks:load', () => {
   navBarToggleMenu();
@@ -47,8 +49,9 @@ document.addEventListener('turbolinks:load', () => {
   initUpdateMenuOnScroll();
   clickRow();
   showAddressInput();
-  showAddReview();
+  newReview();
   setSelectValue();
+  loadDynamicBannerText();
 });
 
 import "controllers"
