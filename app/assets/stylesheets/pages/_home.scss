@@ -3,6 +3,23 @@
   height: 95vh;
   background-color: $light-green;
   padding-top: 100px;
+  position: relative;
+}
+
+#home1{
+  position: absolute;
+  top: 105px;
+  right: -200px;
+}
+#home2{
+  position: absolute;
+  top: 400px;
+  left: -10px;
+}
+#home3{
+  position: absolute;
+  top: 700px;
+  right: -50px;
 }
 
 .step > img {
