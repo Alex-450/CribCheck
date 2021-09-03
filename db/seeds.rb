@@ -96,8 +96,8 @@ positive_rating = (3..5).to_a
 negative_rating = (1..3).to_a
 rental_cost = (700..1000).to_a
 
+x = 0
 10.times do
-  i = 0
   Review.create!(
     user_id: users.sample,
     property_id: property_ids.sample,
@@ -107,10 +107,10 @@ rental_cost = (700..1000).to_a
     communication: positive_rating.sample,
     maintenance: positive_rating.sample,
     cleanliness: positive_rating.sample,
-    landlord_comment: positive_landlord_reviews[i],
-    property_comment: positive_property_reviews[i]
+    landlord_comment: positive_landlord_reviews[x],
+    property_comment: positive_property_reviews[x]
   )
-  puts "Created: #{Review.last}"
+  puts "Created: #{Review.last.landlord_comment}"
   Review.create!(
     user_id: users.sample,
     property_id: property_ids.sample,
@@ -120,10 +120,10 @@ rental_cost = (700..1000).to_a
     communication: negative_rating.sample,
     maintenance: negative_rating.sample,
     cleanliness: negative_rating.sample,
-    landlord_comment: negative_landlord_reviews[i],
-    property_comment: negative_property_reviews[i]
+    landlord_comment: negative_landlord_reviews[x],
+    property_comment: negative_property_reviews[x]
   )
-  puts "Created: #{Review.last}"
-  i += 1
+  puts "Created: #{Review.last.landlord_comment}"
+  x += 1
 end
 puts "Done!"
