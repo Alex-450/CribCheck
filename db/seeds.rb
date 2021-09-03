@@ -36,7 +36,7 @@ negative_landlord_reviews = [
   "Really unfriendly and unhelpful, would not recommend to anyone!",
   "Steer clear If you value your sanity!",
   "Kept turning up at the place without warning, was really rude",
-  "Just terrible...",
+  "Just terrible..."
 ]
 
 positive_property_reviews = [
@@ -48,7 +48,8 @@ positive_property_reviews = [
   "Absolutely loved this place, you are in for a treat!",
   "The apartment is nice but the location is really an issue, nowhere near anything.",
   "Really modern and really well looked-after, can highly recommend!",
-  "Great place, can't recommend enough!"
+  "Great place, can't recommend enough!",
+  "Amazing, really recommend!"
 ]
 
 negative_property_reviews = [
@@ -91,16 +92,17 @@ end
 puts "Creating reviews..."
 
 property_ids = Property.all.ids
+p property_ids
 users = User.all.ids
 positive_rating = (3..5).to_a
 negative_rating = (1..3).to_a
 rental_cost = (700..1000).to_a
 
 x = 0
-10.times do
+5.times do
   Review.create!(
     user_id: users.sample,
-    property_id: property_ids.sample,
+    property_id: property_ids[x],
     landlord_rating: positive_rating.sample,
     property_rating: positive_rating.sample,
     rental_cost: rental_cost.sample,
@@ -111,9 +113,14 @@ x = 0
     property_comment: positive_property_reviews[x]
   )
   puts "Created: #{Review.last.landlord_comment}"
+  x += 1
+end
+
+x = 4
+5.times do
   Review.create!(
     user_id: users.sample,
-    property_id: property_ids.sample,
+    property_id: property_ids[x + 1],
     landlord_rating: negative_rating.sample,
     property_rating: negative_rating.sample,
     rental_cost: rental_cost.sample,
@@ -124,6 +131,7 @@ x = 0
     property_comment: negative_property_reviews[x]
   )
   puts "Created: #{Review.last.landlord_comment}"
+  p x
   x += 1
 end
 puts "Done!"
