@@ -1,12 +1,15 @@
 
-<div class="container">
-  <div class="row">
+<div class="container-fluid px-0">
+<div class="jumbotron jumbotron-fluid justify-content-center jumbotron-header">
+      <h1><%= @landlord.name %></h1>
+    </div>
+  <div class="row px-5">
     <div class="col">
-      <h1>Landlord name: <%= @landlord.name %></h1>
       <h2>Properties:</h2>
       <% @properties.each do |property| %>
-      <%= property.address %>
-      <%= link_to "See property", property_path(property) %>
+        <%= link_to property_path(property) do %>
+          <p><%= property.address %></p>
+        <% end %>
       <% end %>
     </div>
   </div>
