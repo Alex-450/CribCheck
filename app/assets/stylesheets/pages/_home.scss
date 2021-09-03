@@ -7,16 +7,29 @@
   margin-top: 40px
 }
 
+.viewheight{
+  height: 100vh;
+}
+.viewheighthalf{
+  height: 50vh;
+}
+
 .apartment-section{
   margin: 40px auto;
 }
 
 .buttons {
+  margin-top: 70px;
   z-index: 2;
+}
+
+.buttons > .btn-action {
+  padding: 19px 45px;
 }
 
 .banner-text > p {
   font-size: 45px;
+  background-color: transparent;
 }
 #home1{
   position: absolute;
@@ -32,7 +45,7 @@
 }
 #home3{
   position: absolute;
-  top: 700px;
+  bottom: 30px;
   right: -50px;
   z-index: -100;
 

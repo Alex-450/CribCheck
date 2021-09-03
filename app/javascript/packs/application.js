@@ -51,7 +51,7 @@ document.addEventListener('turbolinks:load', () => {
   showAddressInput();
   newReview();
   setSelectValue();
-  loadDynamicBannerText();
+  // loadDynamicBannerText();
 });
 
 import "controllers"
