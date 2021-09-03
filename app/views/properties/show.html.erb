@@ -1,7 +1,7 @@
 <div id="property-container" class="container">
   <div class="row">
     <div class="col-7 card-show">
-      <%= image_tag "house.png" %>
+      <%= image_tag "houses/#{rand(10)}" %>
       <h1><%= @property.address %></h1>
       <p><span class="prop-info">Landlord: </span><%= @property.landlord.name %></p>
       <p><span class="prop-info">Overall score: </span> TODO ★</p>
