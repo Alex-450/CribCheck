@@ -33,3 +33,46 @@ footer {
 body{
   background-color: $light-green;
 }
+
+.homepage-reviews {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .fa-chevron-left {
+    font-size: 3rem;
+  }
+
+  .fa-chevron-right {
+    font-size: 3rem;
+  }
+}
+
+.homepage-review {
+  color: white;
+  background-color: $dark-green;
+  width: 250px;
+  height: 270px;
+  border-radius: 10px;
+  box-shadow: 0px -12px 20px rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-left: 8px;
+
+  i {
+    color: $call-to-action;
+    font-size: 1rem;
+  }
+
+  #homepage-review-user {
+    font-size: 3rem;
+  }
+}
+
+.circles-reviews {
+  margin: 1rem auto;
+  text-align: center;
+}
