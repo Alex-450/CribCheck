@@ -1,4 +1,4 @@
-const showAddReview = () => {
+const newReview = () => {
   const element = document.querySelector("#new-review");
   const div = document.querySelector("#toggle-review");
   element.addEventListener("click", (e) => {
@@ -11,4 +11,4 @@ const showAddReview = () => {
   });
 }
 
-export { showAddReview };
+export { newReview };
