@@ -16,7 +16,7 @@
           <%= link_to property_path(property), class: "card-index" do %>
             <%= image_tag "houses/#{rand(10)}.jpeg" %>
             <p> <%= property.address %></p>
-            <p>Landlord: John Doe</p>
+            <p>Landlord: <%= property.landlord.name %></p>
             <p>Rating: ★★★☆☆</p>
             <p class="btn-submit">See property</p>
           <% end %>

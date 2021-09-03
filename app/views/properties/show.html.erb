@@ -4,7 +4,7 @@
       <%= image_tag "houses/#{rand(10)}" %>
       <h1><%= @property.address %></h1>
       <p><span class="prop-info">Landlord: </span><%= @property.landlord.name %></p>
-      <p><span class="prop-info">Overall score: </span> TODO ★</p>
+      <p><span class="prop-info">Overall score: </span>★★★</p>
       <p><span class="prop-info">Reviews: </span><%= @property.reviews.count %></p>
 
       <% if @property.reviews.any? %>
