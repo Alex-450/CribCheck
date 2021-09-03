@@ -4,11 +4,11 @@
   <img src="<%= asset_path('home-two.png')  %>" alt="" id="home2">
   <img src="<%= asset_path('home-three.png')  %>" alt="" id="home3">
 
-  <div class="container">
+  <div class="container z-index">
     <div class="banner-text p-3">
-      <h1 class="d-green bold">Check out your future appatment </h1>
-      <h1 class="green semi-bold">No more surprises</h1>
-      <h1 class="green semi-bold">This is how it works!</h1>
+      <h1 class="d-green bold">Check out your future apartment </h1>
+      <p class="green semi-bold">No more surprises...</p>
+      <p class="green semi-bold">This is how it works!</p>
     </div>
 
     <div class="how-it-works d-flex justify-content-around">
@@ -25,6 +25,182 @@
         <h2 class="semi-bold">Review</h2>
       </div>
     </div>
-  </div>
+    <div class="buttons mt-3 ">
+      <%= link_to 'Search landlord', root_path, class:"btn btn-action mx-3" %>
+      <%= link_to 'Search property', root_path, class:"btn btn-action mx-3" %>
+    </div>
 
+
+
+    <div class="apartment-section">
+      <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+      <!--Controls-->
+      <div class="controls-top">
+        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+      </div>
+      <!--/.Controls-->
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example" data-slide-to="1"></li>
+        <li data-target="#multi-item-example" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+
+
+            <div class="col-12 col-md-6 col-lg-6">
+
+            </div>
+
+          <div class="row">
+            <div class="col-md-4">
+
+
+            <div class="card-slider">
+                <img src="<%= asset_path('house.svg')  %>" alt="">
+                <p> Hobbemakade</p>
+                <p>Landlord: John Doe</p>
+                <p>Rating: ★★★☆☆</p>
+                <p class="btn-submit ">See property</p>
+            </div>
+
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card-slider">
+                <img src="<%= asset_path('house.svg')  %>" alt="">
+                <p> Hobbemakade</p>
+                <p>Landlord: John Doe</p>
+                <p>Rating: ★★★☆☆</p>
+                <p class="btn-submit ">See property</p>
+
+            </div>
+
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card-slider">
+                <img src="<%= asset_path('house.svg')  %>" alt="">
+                <p> Hobbemakade</p>
+                <p>Landlord: John Doe</p>
+                <p>Rating: ★★★☆☆</p>
+                <p class="btn-submit ">See property</p>
+
+            </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!--/.First slide-->
+
+        <!--Second slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <div class="col-md-4">
+             <div class="card-slider">
+                <img src="<%= asset_path('house.svg')  %>" alt="">
+                <p> Hobbemakade</p>
+                <p>Landlord: John Doe</p>
+                <p>Rating: ★★★☆☆</p>
+                <p class="btn-submit ">See property</p>
+
+            </div>
+
+
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+             <div class="card-slider">
+                <img src="<%= asset_path('house.svg')  %>" alt="">
+                <p> Hobbemakade</p>
+                <p>Landlord: John Doe</p>
+                <p>Rating: ★★★☆☆</p>
+                <p class="btn-submit ">See property</p>
+            </div>
+
+
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card-slider">
+                <img src="<%= asset_path('house.svg')  %>" alt="">
+                <p> Hobbemakade</p>
+                <p>Landlord: John Doe</p>
+                <p>Rating: ★★★☆☆</p>
+                <p class="btn-submit ">See property</p>
+            </div>
+
+
+
+
+
+            </div>
+          </div>
+
+        </div>
+        <!--/.Second slide-->
+
+        <!--Third slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <div class="col-md-4">
+            <div class="card-slider">
+                <img src="<%= asset_path('house.svg')  %>" alt="">
+                <p> Hobbemakade</p>
+                <p>Landlord: John Doe</p>
+                <p>Rating: ★★★☆☆</p>
+                <p class="btn-submit ">See property</p>
+            </div>
+
+
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card-slider">
+                <img src="<%= asset_path('house.svg')  %>" alt="">
+                <p> Hobbemakade</p>
+                <p>Landlord: John Doe</p>
+                <p>Rating: ★★★☆☆</p>
+                <p class="btn-submit ">See property</p>
+            </div>
+
+
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card-slider">
+                <img src="<%= asset_path('house.svg')  %>" alt="">
+                <p> Hobbemakade</p>
+                <p>Landlord: John Doe</p>
+                <p>Rating: ★★★☆☆</p>
+                <p class="btn-submit ">See property</p>
+            </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!--/.Third slide-->
+
+      </div>
+      <!--/.Slides-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+
+      </div>
+
+    </div>
 </div>

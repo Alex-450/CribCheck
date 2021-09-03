@@ -4,8 +4,18 @@
   background-color: $light-green;
   padding-top: 100px;
   position: relative;
+  z-index: 1;
 }
 
+.z-index{
+  position:absolute;
+  z-index: 50;
+  margin-left: 25%;
+}
+
+.banner-text > p {
+  font-size: 45px;
+}
 #home1{
   position: absolute;
   top: 105px;
@@ -15,6 +25,7 @@
   position: absolute;
   top: 400px;
   left: -10px;
+  z-index: 0;
 }
 #home3{
   position: absolute;

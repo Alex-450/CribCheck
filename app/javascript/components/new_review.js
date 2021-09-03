@@ -2,7 +2,7 @@ const showAddReview = () => {
   const element = document.querySelector("#new-review");
   const div = document.querySelector("#toggle-review");
   element.addEventListener("click", (e) => {
-    e.preventDefault
+    // e.preventDefault
     if (div.style.display !== "none") {
     div.style.display = "none";
     } else {
