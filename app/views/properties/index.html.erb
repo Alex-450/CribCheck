@@ -11,7 +11,7 @@
     </header>
 
     <div class="col-12 col-md-6 col-lg-6">
-      <div class="cards-index d-flex flex-wrap">
+      <div class="cards-index d-flex flex-wrap justify-content-center">
         <% @properties.each do |property| %>
           <%= link_to property_path(property), class: "card-index" do %>
             <%= image_tag "houses/#{rand(10)}.jpeg" %>
