@@ -1,25 +1,20 @@
-#properties-index {
-  a {
-    color: $dark-green;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-
-  .btn-submit {
-    width: 150px;
-  }
-}
-
 #properties-container {
-  margin-top: 5rem;
+
+  header {
+    color: white;
+    background-color: $light-green;
+    z-index: 1;
+    padding-top: 200px;
+    padding-bottom: 3rem;
+  }
 
   .cards-index {
     margin: -1rem;
   }
 
   .card-index {
+    color: $dark-green;
+    text-decoration: none;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -39,6 +34,39 @@
     left: auto;
     bottom: auto;
     transform: none;
+  }
 }
 
+#query {
+  width: 300px;
+  margin-bottom: 16px;
+  border: $call-to-action;
+  border-style: solid none solid solid;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+
+  input, button {
+    height: 40px;
+    color: white;
+    margin: 8px 0;
+  }
+
+  i {
+    color: white;
+    padding-left: 2px;
+  }
+
+  .btn-search {
+    color: $white;
+    border: none;
+    background-color: $call-to-action;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
