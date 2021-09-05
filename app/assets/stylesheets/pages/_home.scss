@@ -41,8 +41,7 @@ body{
   margin: 0 auto;
 
   .carousel_track-container {
-    background-color: $dark-green;
-    padding: 10px;
+    background: $dark-green;
     height: 100%;
     position: relative;
   }
@@ -83,5 +82,14 @@ body{
       color: $dark-green;
       width: 12px;
     }
+  }
+
+  .carousel_nav {
+    background-color: pink;
+  }
+
+  .carousel_indicator {
+    border: 0;
+
   }
 }
