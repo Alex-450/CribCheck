@@ -34,7 +34,8 @@ import { showAddressInput } from "../components/showAddressInput";
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { clickRow } from "../components/table_row_select";
 import { newReview } from '../components/new_review';
-import { setSelectValue } from '../components/set_select_value'
+import { setSelectValue } from '../components/set_select_value';
+import { initCarousel } from '../components/carousel';
 // import { loadDynamicBannerText } from '../components/banner';
 
 
@@ -52,6 +53,7 @@ document.addEventListener('turbolinks:load', () => {
   newReview();
   setSelectValue();
   // loadDynamicBannerText();
+  initCarousel();
 });
 
 import "controllers"
