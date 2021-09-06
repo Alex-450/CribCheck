@@ -8,7 +8,7 @@
       <div class="col-7 card-show">
         <% lat = @property.latitude  %>
         <% long = @property.longitude %>
-        <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
+        <img src="https://maps.googleapis.com/maps/api/streetview?size=1000x1000&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
         <h1><%= @property.address %></h1>
         <p><span class="prop-info">Landlord: </span><%= @property.landlord.name %></p>
         <p><span class="prop-info">Overall score: </span>★★★</p>
