@@ -57,6 +57,10 @@
           flex-grow: 1;
         }
       }
+
+      .review-date {
+        font-size: .7rem;
+      }
     }
 
     i {
@@ -74,5 +78,6 @@
 }
 
 .review-link {
-    margin-top: 20px;
-  }
+  margin: 40px auto -15px;
+  text-align: center;
+}
