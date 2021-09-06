@@ -2,6 +2,14 @@
   <div class="row">
     <header class="col-12 text-center">
       <h1><%= @landlord.name %></h1>
+      <h2><%= @average_property_rating %></h2>
+      <% @reviews.each do |review| %>
+        <p><%= review.landlord_comment %></p>
+        <p><%= review.property_comment %></p>
+        <p><%= review.property_rating %></p>
+        <p><%= review.landlord_rating %></p>
+      <% end %>
+
     </header>
 
     <% if @properties.count > 0 %>

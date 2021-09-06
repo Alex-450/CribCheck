@@ -17,6 +17,9 @@ class LandlordsController < ApplicationController
   def show
     @landlord = Landlord.find(params[:id])
     @properties = @landlord.properties
+    @reviews = @landlord.reviews
+    @average_property_rating = 0
+    @reviews.map { |review| @average_property_rating += review.landlord_rating.to_f / @reviews.count }
     @markers = @properties.geocoded.map do |property|
       {
         lat: property.latitude,
