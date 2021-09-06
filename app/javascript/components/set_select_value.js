@@ -1,7 +1,12 @@
+import $ from 'jquery';
+import 'select2';
+
 const setSelectValue = () => {
   const queryString = window.location.search;
-  console.log(queryString)
-  $('.select2Landlord').val('1');
+  if (queryString) {
+    const landlordId = queryString.match(/\d+/)[0];
+    $('.select2Landlord').val(landlordId).trigger('change');
+  }
 }
 
 export { setSelectValue }
