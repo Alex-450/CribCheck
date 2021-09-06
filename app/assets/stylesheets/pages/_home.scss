@@ -7,6 +7,15 @@
   margin-top: 40px
 }
 
+#img-home {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  z-index: -100;
+  width: 500px;
+  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+}
+
 .viewheight{
   height: 100vh;
 }
@@ -27,8 +36,8 @@
   padding: 19px 45px;
 }
 
-.banner-text > p {
-  font-size: 45px;
+.text {
+  font-size: 30px;
   background-color: transparent;
 }
 #home1{

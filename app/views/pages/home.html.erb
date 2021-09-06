@@ -7,15 +7,18 @@
   <div class="container">
     <div class="viewheight">
       <div class="banner-text p-3">
-        <h1 class="d-green bold">Check out your future apartment </h1>
-        <p class="green semi-bold">No more surprises...</p>
-        <p class="green semi-bold">This is how it works!</p>
-      </div>
-
-
-      <div class="buttons justify-content-center">
-        <%= link_to 'Search landlord', landlords_path, class:"btn btn-action mx-3", id:"btn-banner"%>
-        <%= link_to 'Search property', properties_path, class:"btn btn-action mx-3", id:"btn-banner" %>
+        <div class="row row-cols-2">
+          <div class="col-8">
+            <h1 class="d-green bold">Check out your future apartment </h1>
+            <p class="green semi-bold text">No more surprises...</p>
+            <p class="green semi-bold text">This is how it works!</p>
+            <%= link_to 'Search landlord', landlords_path, class:"btn btn-action mx-3", id:"btn-banner"%>
+            <%= link_to 'Search property', properties_path, class:"btn btn-action mx-3", id:"btn-banner" %>
+          </div>
+          <div class="col-4">
+            <img src="<%= asset_path('key.jpg')  %>" alt="" id="img-home">
+          </div>
+        </div>
       </div>
     </div>
 
