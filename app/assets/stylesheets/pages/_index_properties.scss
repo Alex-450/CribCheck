@@ -54,6 +54,14 @@
     margin: 8px 0;
   }
 
+  input:focus-visible {
+    outline: none;
+  }
+
+  input:focus {
+    box-shadow: none;
+  }
+
   i {
     color: white;
     padding-left: 2px;
