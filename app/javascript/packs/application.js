@@ -41,7 +41,6 @@ import { initCarousel } from '../components/carousel';
 
 document.addEventListener('turbolinks:load', () => {
   navBarToggleMenu();
-  initSelect2();
   initMapbox();
   showForm();
   initAutocomplete();

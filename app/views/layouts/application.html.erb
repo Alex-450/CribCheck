@@ -6,24 +6,20 @@
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('logo-dark-green-bg-white-2.png') %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-    <%= stylesheet_pack_tag 'application' %>
+
   </head>
 
   <body>
     <div class='main-container'>
         <%= render 'shared/navbar' %>
         <%= render 'shared/flashes' %>
-
-
-
         <%= yield %>
-
         <%= render 'shared/footer' %>
     </div>
-
   </body>
 
 </html>
