@@ -1,13 +1,28 @@
 const initCarousel = () => {
   const carousel = document.querySelector('#carousel');
   const btnLeft = document.querySelector('#carousel .scroll-left');
-  const btnRight = document.querySelector('#carousel .scroll-right')
+  const btnRight = document.querySelector('#carousel .scroll-right');
+  const firstCircle = document.querySelector('#first-circle');
+  const secondCircle = document.querySelector('#second-circle');
+  const thirdCircle = document.querySelector('#third-circle');
 
   if (btnLeft) {
-    btnLeft.addEventListener('click', (event) => shiftCarousel(-1));
+    btnLeft.addEventListener('click', (event) => {
+      shiftCarousel(-1);
+      firstCircle.classList.remove('far');
+      firstCircle.classList.add('fas');
+      secondCircle.classList.remove('fas');
+      secondCircle.classList.add('far');
+    });
   }
   if (btnRight) {
-    btnRight.addEventListener('click', (event) => shiftCarousel(1));
+    btnRight.addEventListener('click', (event) => {
+      shiftCarousel(1);
+      thirdCircle.classList.remove('far');
+      thirdCircle.classList.add('fas');
+      secondCircle.classList.remove('fas');
+      secondCircle.classList.add('far');
+    });
   }
 
 }

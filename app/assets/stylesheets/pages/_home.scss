@@ -132,7 +132,7 @@ body{
     i {
     color: $call-to-action;
     font-size: 1rem;
-  }
+    }
   }
 
   li.first, li.first+li, li.first+li+li {
@@ -150,8 +150,8 @@ body{
     font-size: 3rem;
   }
 
-  .circles-reviews {
-  margin: 1rem auto;
-  text-align: center;
-}
+  #circles-reviews {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
