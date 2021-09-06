@@ -1,33 +1,37 @@
 
-<div class="container-fluid px-0">
-  <div class="col-12 top-map">
+<div class="container mw-100" id="properties-container">
+  <div class="row">
+    <header class="text-center col-12">
+      <h2>Properties <%= @landlord.name %></h2>
+    </header>
+    <% if @properties.count > 0 %>
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="cards-index d-flex flex-wrap justify-content-center">
+        <% @properties.each do |property| %>
+          <%= link_to property_path(property), class: "card-index" do %>
+            <%= image_tag "houses/#{rand(10)}.jpeg" %>
+            <p><%= property.address %></p>
+            <p>Landlord: <%= property.landlord.name %></p>
+            <p>Rating: ★★★☆☆</p>
+            <p class="btn-submit">See property</p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div id="map-container" class="col-12 col-md-6 col-lg-6">
       <div id="map"
       style=""
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
-  <% if @properties.count > 0 %>
-    <div id="properties-container">
-      <div class="row px-5 justify-content-center">
-        <div class="col-12">
-          <h2 class="text-center mb-5">Properties <%= @landlord.name %></h2>
-          <div class="cards-index d-flex flex-wrap justify-content-center">
-            <% @properties.each do |property| %>
-              <%= link_to property_path(property), class: "card-index" do %>
-                <%= image_tag "houses/#{rand(10)}.jpeg" %>
-                <p><%= property.address %></p>
-                <p>Landlord: <%= property.landlord.name %></p>
-                <p>Rating: ★★★☆☆</p>
-                <p class="btn-submit">See property</p>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
+  </div>
+      <% end %>
+    <div class="row">
+      <div class="col text-center">
+        <% if @properties.count == 0 %>
+          <p class="text-center">No properties listed for this landlord...<p>
+        <% end %>
       </div>
     </div>
-    <% end %>
-    <% if @properties.count == 0 %>
-      <p class="text-center">No properties listed for this landlord...<p>
-    <% end %>
 </div>

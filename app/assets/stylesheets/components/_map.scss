@@ -10,12 +10,6 @@
   height: 600px;
 }
 
-.top-map {
-  padding-top: 100px;
-  height: 40vh;
-  margin: 0;
-}
-
 @include media-breakpoint-up(md) {
   #map-container {
     position: fixed;
