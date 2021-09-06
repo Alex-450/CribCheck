@@ -3,7 +3,7 @@
     <header class="col-12 text-center">
       <h1>Properties</h1>
       <%= form_tag properties_path, class: 'search', method: :get do %>
-      <%= text_field_tag :query, nil, placeholder: "Search property or landlord...", class: 'form-control form-tag'%>
+      <%= text_field_tag :query, nil, placeholder: "Search property or landlord...", class: 'form-control form-tag' %>
       <button type="submit" class="btn btn-search">
         Search <%= icon('fas', 'search') %>
       </button>
@@ -14,7 +14,9 @@
       <div class="cards-index d-flex flex-wrap justify-content-center">
         <% @properties.each do |property| %>
           <%= link_to property_path(property), class: "card-index" do %>
-            <%= image_tag "houses/#{rand(10)}.jpeg" %>
+            <% lat = property.latitude  %>
+            <% long = property.longitude %>
+            <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
             <p> <%= property.address %></p>
             <p>Landlord: <%= property.landlord.name %></p>
             <p>Rating: ★★★☆☆</p>

@@ -23,7 +23,6 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { initSelect2 } from '../components/init_select2';
 import { navBarToggleMenu } from '../components/navbar';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initUpdateBtnOnScroll } from '../components/navbar';
@@ -41,7 +40,6 @@ import { initCarousel } from '../components/carousel';
 
 document.addEventListener('turbolinks:load', () => {
   navBarToggleMenu();
-  initSelect2();
   initMapbox();
   showForm();
   initAutocomplete();
