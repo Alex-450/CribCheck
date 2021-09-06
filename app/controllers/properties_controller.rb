@@ -2,7 +2,11 @@ class PropertiesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @properties = Property.all
+    if params[:query].present?
+      @properties = Property.global_search(params[:query])
+    else
+      @properties = Property.all
+    end
 
     @markers = @properties.geocoded.map do |property|
       {
