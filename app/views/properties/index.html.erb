@@ -3,7 +3,7 @@
     <header class="col-12 text-center">
       <h1>Properties</h1>
       <%= form_tag properties_path, class: 'search', method: :get do %>
-      <%= text_field_tag :query, nil, placeholder: "Search property or landlord...", class: 'form-control form-tag'%>
+      <%= text_field_tag :query, nil, placeholder: "Search property or landlord...", class: 'form-control form-tag' %>
       <button type="submit" class="btn btn-search">
         Search <%= icon('fas', 'search') %>
       </button>
