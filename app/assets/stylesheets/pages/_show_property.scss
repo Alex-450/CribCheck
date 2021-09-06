@@ -1,8 +1,27 @@
 #property-container {
   margin-top: 7rem;
 
+  .card-show {
+    text-align: left;
+  }
+
   .prop-info {
-    font-weight: bold;
+    span {
+      font-weight: bold;
+    }
+
+    i {
+      padding-right: 4px;
+      color: $call-to-action;
+    }
+  }
+
+  .landlord {
+      font-size: 1rem;
+    }
+
+  .score {
+    font-size: 1.2rem;
   }
 
   a {
@@ -14,14 +33,31 @@
   }
 
   .reviews {
-    background-color: $green;
+    padding: 0;
+    list-style: none;
     color: white;
-    border-radius: 5px;
     display: flex;
-    flex-direction: column;
-    width: 95%;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin: 8px auto;
 
+    li {
+      width: 45%;
+      border-radius: 5px;
+      background-color: $green;
+      display: flex;
+      flex-direction: column;
+
+      header {
+        display: flex;
+        padding-top: 8px;
+        margin-bottom: 16px;
+
+        div {
+          flex-grow: 1;
+        }
+      }
+    }
 
     i {
       color: white;
@@ -33,19 +69,10 @@
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
-  }
-
-  .review-first-row {
-    display: flex;
-    justify-content: space-between;
-    margin: 8px;
-  }
-
-  .review-second-row {
-    text-align: left;
-  }
-
-  .review-link {
-    margin-top: 20px;
+    margin-right: 8px;
   }
 }
+
+.review-link {
+    margin-top: 20px;
+  }

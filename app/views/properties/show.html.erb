@@ -1,43 +1,66 @@
 <div id="property-container" class="container">
   <div class="row">
-    <div class="col-7 card-show">
+    <div class="col-12 card-show">
       <% lat = @property.latitude  %>
       <% long = @property.longitude %>
-      <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
       <h1><%= @property.address %></h1>
-      <p><span class="prop-info">Landlord: </span><%= @property.landlord.name %></p>
-      <p><span class="prop-info">Overall score: </span>★★★</p>
-      <p><span class="prop-info">Reviews: </span><%= @property.reviews.count %></p>
+      <p class="prop-info landlord">owned by <span><%= @property.landlord.name %></span></p>
+      <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
+      <p class="prop-info mt-3 score"><span>Overall score: </span><i class="fas fa-star"></i>5.0 (<%= @property.reviews.count %> reviews)</p>
+
+      <div class="d-flex justify-content-between align-items-center my-5 prop-rating" >
+        <div>
+          <p>Landlord overall rating</p>
+          <p>Communication</p>
+        </div>
+        <div>
+          <p>------------4.9</p>
+          <p>------------4.9</p>
+        </div>
+         <div>
+          <p>Maintenance</p>
+          <p>Cleanliness</p>
+        </div>
+        <div>
+          <p>------------4.9</p>
+          <p>------------4.9</p>
+        </div>
+      </div>
 
       <% if @property.reviews.any? %>
-        <% @property.reviews.each do |f|%>
-          <div class="reviews">
-            <div class="review-first-row">
+        <ul class="reviews">
+        <% @property.reviews.each do |review|%>
+          <li>
+            <header>
               <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png"/>
+              <div>
+                <div>John</div>
+                <div>September 2021</div>
+              </div>
               <p>
-              <% if f.property_rating.nil? %>
-                <% 5.times do %>
-                  <i class="fas fa-star black"></i>
+                <% if review.property_rating.nil? %>
+                  <% 5.times do %>
+                    <i class="fas fa-star black"></i>
+                  <% end %>
+                <% else %>
+                  <% review.property_rating.times do %>
+                    <i class="fas fa-star black"></i>
+                  <% end %>
                 <% end %>
-              <% else %>
-                <% f.property_rating.times do %>
-                  <i class="fas fa-star black"></i>
-                <% end %>
-              <% end %>
               </p>
-            </div>
-              <p class="review-second-row"><strong><%= f.property_comment %></strong></p>
-          </div>
+            </header>
+            <p><%= review.property_comment %></p>
+          </li>
         <% end %>
+        </ul>
       <% else %>
-        <p>No reviews yet</p>
+        <p>This property doesn't have any reviews yet.</p>
       <% end %>
-
       <div class="review-link">
         <button id="new-review" class="btn btn-action">leave review</button>
       </div>
-    </div>
-  </div>
+    </div> <!-- .col -->
+  </div> <!-- .row -->
 
   <div class="card-new-review" id="toggle-review" style="display:none;">
     <%= simple_form_for [@property, @review] do |f| %>
