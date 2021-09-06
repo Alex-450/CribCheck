@@ -4,7 +4,7 @@
       <% lat = @property.latitude  %>
       <% long = @property.longitude %>
       <h1><%= @property.address %></h1>
-      <p class="prop-info landlord">owned by <span><%= @property.landlord.name %></span></p>
+      <p class="prop-info landlord">owned by <span><%= link_to @property.landlord.name, landlord_path(@property.landlord.id) %></span></p>
       <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
       <p class="prop-info mt-3 score"><span>Overall score: </span><i class="fas fa-star"></i>5.0 (<%= @property.reviews.count %> reviews)</p>
 
