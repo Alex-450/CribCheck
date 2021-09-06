@@ -40,76 +40,77 @@
         <li>
           <i class="fas fa-user"></i>
           <div>
-          <% Review.order('RANDOM()').first.property_rating.times do %>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
               <i class="fas fa-star black"></i>
             <% end %>
           </div>
-          <p><em><%= Review.order('RANDOM()').first.property_comment %></em></p>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
         </li>
         <li>
           <i class="fas fa-user"></i>
           <div>
-          <% Review.order('RANDOM()').first.property_rating.times do %>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
               <i class="fas fa-star black"></i>
             <% end %>
           </div>
-          <p><em><%= Review.order('RANDOM()').first.property_comment %></em></p>
-        </li>
-        <li>
-          <i class="fas fa-user"></i>
-          <div>
-          <% Review.order('RANDOM()').first.property_rating.times do %>
-              <i class="fas fa-star black"></i>
-            <% end %>
-          </div>
-          <p><em><%= Review.order('RANDOM()').first.property_comment %></em></p>
-        </li>
-        <li>
-          <i class="fas fa-user"></i>
-          <div>
-          <% Review.order('RANDOM()').first.property_rating.times do %>
-              <i class="fas fa-star black"></i>
-            <% end %>
-          </div>
-          <p><em><%= Review.order('RANDOM()').first.property_comment %></em></p>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
         </li>
         <li class="first">
           <i class="fas fa-user"></i>
           <div>
-          <% Review.order('RANDOM()').first.property_rating.times do %>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
               <i class="fas fa-star black"></i>
             <% end %>
           </div>
-          <p><em><%= Review.order('RANDOM()').first.property_comment %></em></p>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
         </li>
         <li>
           <i class="fas fa-user"></i>
           <div>
-          <% Review.order('RANDOM()').first.property_rating.times do %>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
               <i class="fas fa-star black"></i>
             <% end %>
           </div>
-          <p><em><%= Review.order('RANDOM()').first.property_comment %></em></p>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
         </li>
         <li>
           <i class="fas fa-user"></i>
           <div>
-          <% Review.order('RANDOM()').first.property_rating.times do %>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
               <i class="fas fa-star black"></i>
             <% end %>
           </div>
-          <p><em><%= Review.order('RANDOM()').first.property_comment %></em></p>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
         </li>
-
+        <li>
+          <i class="fas fa-user"></i>
+          <div>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+              <i class="fas fa-star black"></i>
+            <% end %>
+          </div>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+        </li>
+        <li>
+          <i class="fas fa-user"></i>
+          <div>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+              <i class="fas fa-star black"></i>
+            <% end %>
+          </div>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+        </li>
       </ul>
       <button class="scroll-right">
         <i class="fas fa-chevron-right"></i>
       </button>
     </section>
-    <div id="circles-reviews">
-      <i id="first-circle" class="far fa-circle"></i>
-      <i id="second-circle" class="fas fa-circle"></i>
-      <i id="third-circle" class="far fa-circle"></i>
+    <div id="circles-reviews" style="margin: 1rem auto; text-align: center;">
+      <i class="far fa-circle circle-review"></i>
+      <i class="far fa-circle circle-review"></i>
+      <i id="middle-circle" class="fas fa-circle circle-review"></i>
+      <i class="far fa-circle circle-review"></i>
+      <i class="far fa-circle circle-review"></i>
     </div>
 
     <div class="viewheighthalf">
