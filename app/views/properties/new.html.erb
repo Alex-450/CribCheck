@@ -4,7 +4,7 @@
     </div>
   <div class="row px-5 justify-content-center">
     <div class="col-10 col-md-6">
-   
+
 
       <div class="card green-card">
         <div class="card-header bg-green">Add a new property</div>
@@ -19,7 +19,9 @@
           <div class="card-body" id="propertyForm" style="display:block;">
             <h5>Please select your landlord</h5>
             <%= simple_form_for @property do |f| %>
-              <%= f.association :landlord, input_html: { class: 'select2Landlord' }  %>
+              <div data-controller="init-select-2">
+                <%= f.association :landlord, input_html: {id: "select2Landlord", data: { target: "select-landlord" }, style:"width:100%;" }  %>
+              </div>
               <div id="propertyAddress" style="display:none;">
                 <h4>Add your property address</h4>
                 <%= f.input :address, placeholder: "3138 Johnstown Road Chicago", input_html: { id: 'property-address' } %>

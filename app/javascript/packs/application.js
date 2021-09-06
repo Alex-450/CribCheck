@@ -40,7 +40,6 @@ import { setSelectValue } from '../components/set_select_value';
 
 document.addEventListener('turbolinks:load', () => {
   navBarToggleMenu();
-  initSelect2();
   initMapbox();
   showForm();
   initAutocomplete();

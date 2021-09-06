@@ -20,7 +20,7 @@
               </div>
               <div data-controller="range-slider-landlord">
                 <input type="range" min="1" max="5" value="3" class="range" id="range" data-target="range-slider-landlord.range" data-action="input->range-slider-landlord#updateValue">
-                <%= f.input :landlord_rating, as: :hidden, input_html: { data: { target: "range-slider-landlord.hidden"}}, collection: 0..5 %>
+                <%= f.input :landlord_rating, as: :hidden, input_html: { class: "select2Landlord" data: { target: "range-slider-landlord.hidden"}}, collection: 0..5 %>
               </div>
               <%# Property rating %>
               <p class="bold">Property rating:</p>
