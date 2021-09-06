@@ -32,50 +32,86 @@
       </div>
     </div>
 
-
-
-    <div class="viewheighthalf">
-      <div class="homepage-reviews">
+    <section id="carousel">
+      <button class="scroll-left">
         <i class="fas fa-chevron-left"></i>
-        <div class="homepage-review">
-          <i id="homepage-review-user" class="fas fa-user"></i>
-          <div id="homepage-review-stars">
-            <% 5.times do %>
+      </button>
+      <ul>
+        <li>
+          <i class="fas fa-user"></i>
+          <div>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
               <i class="fas fa-star black"></i>
             <% end %>
           </div>
-          <p id="homepage-review-text"><em>Amazing propery, I never had any issues with the landlord either</em></p>
-        </div>
-        <div class="homepage-review">
-          <i id="homepage-review-user" class="fas fa-user"></i>
-          <div id="homepage-review-stars">
-            <% 5.times do %>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+        </li>
+        <li>
+          <i class="fas fa-user"></i>
+          <div>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
               <i class="fas fa-star black"></i>
             <% end %>
           </div>
-          <p id="homepage-review-text"><em>  "Did not ever fix any of the many issues that we had with the place",</em></p>
-        </div>
-        <div class="homepage-review">
-          <i id="homepage-review-user" class="fas fa-user"></i>
-          <div id="homepage-review-stars">
-            <% 5.times do %>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+        </li>
+        <li class="first">
+          <i class="fas fa-user"></i>
+          <div>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
               <i class="fas fa-star black"></i>
             <% end %>
           </div>
-          <p id="homepage-review-text"><em>  "Tried to get us to pay for cleaning when we moved out, even though the place was spotless!",</em></p>
-        </div>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+        </li>
+        <li>
+          <i class="fas fa-user"></i>
+          <div>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+              <i class="fas fa-star black"></i>
+            <% end %>
+          </div>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+        </li>
+        <li>
+          <i class="fas fa-user"></i>
+          <div>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+              <i class="fas fa-star black"></i>
+            <% end %>
+          </div>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+        </li>
+        <li>
+          <i class="fas fa-user"></i>
+          <div>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+              <i class="fas fa-star black"></i>
+            <% end %>
+          </div>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+        </li>
+        <li>
+          <i class="fas fa-user"></i>
+          <div>
+          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+              <i class="fas fa-star black"></i>
+            <% end %>
+          </div>
+          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+        </li>
+      </ul>
+      <button class="scroll-right">
         <i class="fas fa-chevron-right"></i>
-      </div>
-      <div class="circles-reviews">
-        <i class="fas fa-circle"></i>
-        <i class="far fa-circle"></i>
-        <i class="far fa-circle"></i>
-      </div>
+      </button>
+    </section>
+    <div id="circles-reviews" style="margin: 1rem auto; text-align: center;">
+      <i class="far fa-circle circle-review"></i>
+      <i class="far fa-circle circle-review"></i>
+      <i id="middle-circle" class="fas fa-circle circle-review"></i>
+      <i class="far fa-circle circle-review"></i>
+      <i class="far fa-circle circle-review"></i>
     </div>
-
-
-
-
 
     <div class="viewheighthalf">
       <div class="apartment-section">

@@ -96,30 +96,62 @@ body{
   }
 }
 
-.homepage-review {
-  color: white;
-  background-color: $dark-green;
-  width: 250px;
-  height: 270px;
-  border-radius: 10px;
-  box-shadow: 0px -12px 20px rgba(255, 255, 255, 1);
+#carousel {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-left: 8px;
+  justify-content: space-between;
 
-  i {
-    color: $call-to-action;
-    font-size: 1rem;
-  }
-
-  #homepage-review-user {
+  button {
+    background-color: transparent;
+    border: none;
     font-size: 3rem;
   }
-}
 
-.circles-reviews {
-  margin: 1rem auto;
-  text-align: center;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 -300px;
+  }
+
+  li {
+    height: 270px;
+    color: white;
+    border-radius: 7px;
+    background-color: transparent;
+    transition: all .4s ease-out;
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    i {
+    color: $call-to-action;
+    font-size: 1rem;
+    }
+  }
+
+  li.first, li.first+li, li.first+li+li {
+    background-color: $dark-green;
+    width: 250px;
+    margin: 0 2rem;
+    padding: 1px 9px;
+  }
+
+  li.first+li+li~li {
+    background-color: transparent;
+  }
+
+  .fa-user {
+    font-size: 3rem;
+  }
+
+  #circles-reviews {
+    margin: 1rem auto;
+    text-align: center;
+  }
 }
