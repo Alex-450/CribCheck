@@ -12,6 +12,13 @@
         <p class="green semi-bold">This is how it works!</p>
       </div>
 
+
+      <div class="buttons justify-content-center">
+        <%= link_to 'Search landlord', landlords_path, class:"btn btn-action mx-3", id:"btn-banner"%>
+        <%= link_to 'Search property', properties_path, class:"btn btn-action mx-3", id:"btn-banner" %>
+      </div>
+    </div>
+
       <div class="how-it-works d-flex justify-content-around">
         <div class="step">
           <img src="<%= asset_path('house.svg')  %>" alt="">
@@ -26,11 +33,6 @@
           <h2 class="semi-bold">Review</h2>
         </div>
       </div>
-      <div class="buttons justify-content-center">
-        <%= link_to 'Search landlord', landlords_path, class:"btn btn-action mx-3", id:"btn-banner"%>
-        <%= link_to 'Search property', properties_path, class:"btn btn-action mx-3", id:"btn-banner" %>
-      </div>
-    </div>
 
     <section id="carousel">
       <button class="scroll-left">
