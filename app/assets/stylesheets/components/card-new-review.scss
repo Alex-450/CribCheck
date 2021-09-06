@@ -23,10 +23,10 @@
   border-radius: 10px;
 }
 .card-new-review {
-  width: 600px;
+  width: 665px;
   background-color: $white;
-  margin: 5px auto;
-  border-radius: 10px;
+  margin: 0 auto;
+  border-radius: 0px 0px 10px 10px;
   display: flex;
   flex-direction: column;
 }
@@ -41,7 +41,7 @@
 
 .card-new-body {
   width: 100%;
-  padding: 10px;
+  padding: 10px 1.25rem;
 }
 
 input[type=range] {

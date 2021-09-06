@@ -1,17 +1,16 @@
-
-<div class="container-fluid px-0">
-<div class="jumbotron jumbotron-fluid justify-content-center jumbotron-header">
+<div id="properties-container" class="container mw-100">
+  <div class="row">
+    <header class="col-12 text-center">
       <h1><%= @landlord.name %></h1>
-    </div>
-  <div id="properties-container">
-    <div class="row px-5 justify-content-center">
-      <div class="col-12">
-        <h2 class="text-center mb-5">Properties</h2>
+    </header>
+
+    <% if @properties.count > 0 %>
+      <div class="col-12 col-md-6 col-lg-6">
         <div class="cards-index d-flex flex-wrap justify-content-center">
           <% @properties.each do |property| %>
             <%= link_to property_path(property), class: "card-index" do %>
-              <%= image_tag "houses/#{rand(10)}.jpeg" %>
-              <p><%= property.address %></p>
+              <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=property.latitude%>,<%=property.longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
+              <p> <%= property.address %></p>
               <p>Landlord: <%= property.landlord.name %></p>
               <p>Rating: ★★★☆☆</p>
               <p class="btn-submit">See property</p>
@@ -19,6 +18,21 @@
           <% end %>
         </div>
       </div>
-    </div>
+
+      <div id="map-container" class="col-12 col-md-6 col-lg-6">
+        <div id="map"
+        style="height:100vh;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+    <% end %>
+    <% if @properties.count == 0 %>
+          <div class="col text-center">
+            <p>No properties yet...</p>
+            <%= link_to 'Add a property', new_property_path, class: 'btn btn-action' %>
+          </div>
+    <% end %>
+
   </div>
 </div>
