@@ -7,14 +7,14 @@
           <div class="table-headers-green">
             <p class="table-item-left">Name</p>
             <p class="table-item-center">Properties</p>
-            <p class="table-item-center">Average rating</p>
+            <p class="table-item-right">Average rating</p>
           </div>
           <% @landlords.each do |landlord| %>
                 <%= link_to landlord_path(landlord) do %>
                   <div class="table-body">
                     <p class="table-item-left"><%= landlord.name %></p>
                     <p class="table-item-center"><%= landlord.properties.count %></p>
-                    <p class="table-item-center">★★★</p>
+                    <p class="table-item-right">★★★</p>
                   </div>
                 <% end %>
           <% end %>

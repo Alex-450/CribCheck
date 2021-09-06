@@ -3,14 +3,22 @@
 <div class="jumbotron jumbotron-fluid justify-content-center jumbotron-header">
       <h1><%= @landlord.name %></h1>
     </div>
-  <div class="row px-5">
-    <div class="col">
-      <h2>Properties:</h2>
-      <% @properties.each do |property| %>
-        <%= link_to property_path(property) do %>
-          <p><%= property.address %></p>
-        <% end %>
-      <% end %>
+  <div id="properties-container">
+    <div class="row px-5 justify-content-center">
+      <div class="col-12">
+        <h2 class="text-center mb-5">Properties</h2>
+        <div class="cards-index d-flex flex-wrap justify-content-center">
+          <% @properties.each do |property| %>
+            <%= link_to property_path(property), class: "card-index" do %>
+              <%= image_tag "houses/#{rand(10)}.jpeg" %>
+              <p><%= property.address %></p>
+              <p>Landlord: <%= property.landlord.name %></p>
+              <p>Rating: ★★★☆☆</p>
+              <p class="btn-submit">See property</p>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
