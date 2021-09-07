@@ -3,6 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @properties = Property.all
-    @reviews = Review.all
+    @reviews = Review.all.last(6)
   end
 end

@@ -26,16 +26,20 @@
           <div class="menu-btn__wrapper">
             <div class="menu-block">
               <nav class="menu-nav with-border">
-                <a class="menu-nav__link" href="#">
-                  <p class="menu-nav__name"></p><i class="fas fa-home"></i>
+                <a class="menu-nav__link">
+                  <%= link_to "/" do %>
+                    <p class="menu-nav__name"></p><i class="fas fa-home"></i>
+                  <% end %>
                 </a>
-                <a class="menu-nav__link" href="#">
-                <%# <% link_to "", destroy_user_session_path, class: "menu-nav__link" do %>
-                  <p class="menu-nav__name"></p><i class="fas fa-user"></i>
+                <a class="menu-nav__link">
+                  <%= link_to edit_user_registration_path do %>
+                    <p class="menu-nav__name"></p><i class="fas fa-user"></i>
+                  <% end %>
                 </a>
-                <%# <% end %> %>
                 <a class="menu-nav__link" href="destroy_user_session_path">
-                  <p class="menu-nav__name"></p><i class="fas fa-sign-out-alt"></i>
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                    <p class="menu-nav__name"></p><i class="fas fa-sign-out-alt"></i>
+                  <% end %>
                 </a>
                 </nav>
                 <a class="menu-btn white" href="#"><span class="menu-btn__line"></span></a>
