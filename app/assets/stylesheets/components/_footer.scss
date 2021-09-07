@@ -1,12 +1,12 @@
 .site-footer
 {
   background-color:$dark-green;
-  padding:45px 0 20px;
+  padding: 1em 1em 1em 1em;
   font-size:15px;
   line-height:24px;
   color:$light-green;
   margin-top: 150px;
-
+  padding-top: 8px;
 }
 .site-footer hr
 {
@@ -64,15 +64,16 @@
   margin-right:0;
   border-radius:100%;
 }
-.copyright-text
-{
-  margin:0
+.copyright-text {
+  margin: 0;
+  padding: 0
 }
+
 @media (max-width:991px)
 {
   .site-footer [class^=col-]
   {
-    margin-bottom:30px
+    margin-bottom:10px
   }
 }
 @media (max-width:767px)
@@ -130,6 +131,10 @@
 
 @media (max-width:767px)
 {
+
+.site-footer {
+  padding: 0;
+}
   .social-icons li.title
   {
     display:block;
