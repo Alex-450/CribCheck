@@ -8,22 +8,22 @@
       <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
       <p class="prop-info mt-3 score"><span>Overall score: </span><i class="fas fa-star"></i>5.0 (<%= @property.reviews.count %> reviews)</p>
 
-      <div class="d-flex justify-content-between align-items-center my-5 prop-rating" >
+      <div class="d-flex justify-content-between flex-wrap my-5 prop-rating" >
         <div>
           <p>Landlord overall rating</p>
-          <p>Communication</p>
+          <p class="rating-slider" style="--rating: <%= 4.8 * 20 %>%"></p>
         </div>
         <div>
-          <p>------------4.9</p>
-          <p>------------4.9</p>
+          <p>Communication</p>
+          <p class="rating-slider" style="--rating: <%= 4.8 * 20 %>%"></p>
         </div>
          <div>
           <p>Maintenance</p>
-          <p>Cleanliness</p>
+          <p class="rating-slider" style="--rating: <%= 4.8 * 20 %>%"></p>
         </div>
         <div>
-          <p>------------4.9</p>
-          <p>------------4.9</p>
+          <p>Cleanliness</p>
+          <p class="rating-slider" style="--rating: <%= 4.8 * 20 %>%"></p>
         </div>
       </div>
 
