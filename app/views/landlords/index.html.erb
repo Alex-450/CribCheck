@@ -1,12 +1,14 @@
-<div class="container-fluid px-0">
+<div class="container-fluid px-0" style="padding-top:200px;">
         <div class="row">
-          <h1 class="text-center">Landlords</h1>
-          <%= form_tag landlords_path, class: 'search', method: :get do %>
-            <%= text_field_tag :query, nil, placeholder: "Search for a landlord...", class: 'form-control form-tag' %>
-            <button type="submit" class="btn btn-search">
-              Search <%= icon('fas', 'search') %>
-            </button>
-          <% end %>
+          <div class="col-12">
+            <h1 class="text-center">Landlords</h1>
+            <%= form_tag landlords_path, class: 'search', method: :get do %>
+              <%= text_field_tag :query, nil, placeholder: "Search for a landlord...", class: 'form-control form-tag' %>
+              <button type="submit" class="btn btn-search">
+                Search <%= icon('fas', 'search') %>
+              </button>
+            <% end %>
+          </div>
         </div>
       <div class="row justify-content-center" id="landlord-list">
         <div class="col-8 mx-5">
