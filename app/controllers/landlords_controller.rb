@@ -17,6 +17,13 @@ class LandlordsController < ApplicationController
   def show
     @landlord = Landlord.find(params[:id])
     @properties = @landlord.properties
+    @markers = @properties.geocoded.map do |property|
+      {
+        lat: property.latitude,
+        lng: property.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { property: property })
+      }
+    end
   end
 
   private
