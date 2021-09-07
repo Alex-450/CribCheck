@@ -9,11 +9,11 @@
 
 #img-home {
   position: absolute;
-  top: -65px;
+  top: 44px;
   right: 20px;
   z-index: -100;
   width: 500px;
-  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+  // clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 }
 
 .viewheight{
@@ -28,12 +28,12 @@
 }
 
 .buttons {
-  margin-top: 70px;
+  margin-top: 150px;
   z-index: 2;
 }
 
 .buttons > .btn-action {
-  padding: 19px 45px;
+  padding: -1px 50px;
 }
 
 .text {
