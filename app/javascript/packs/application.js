@@ -35,7 +35,7 @@ import { clickRow } from "../components/table_row_select";
 import { newReview } from '../components/new_review';
 import { setSelectValue } from '../components/set_select_value';
 import { initCarousel } from '../components/carousel';
-// import { loadDynamicBannerText } from '../components/banner';
+import { loadDynamicBannerText } from '../components/banner';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -50,7 +50,7 @@ document.addEventListener('turbolinks:load', () => {
   showAddressInput();
   newReview();
   setSelectValue();
-  // loadDynamicBannerText();
+  loadDynamicBannerText();
   initCarousel();
 });
 
