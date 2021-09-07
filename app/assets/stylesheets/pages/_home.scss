@@ -150,9 +150,9 @@ body{
     height: 270px;
     color: white;
     border-radius: 7px;
-    background-color: transparent;
+    background-color: $light-green;
     transition: all .4s ease-out;
-    width: 0;
+    width: 250px;
     padding: 0;
     overflow: hidden;
     display: flex;
@@ -177,7 +177,7 @@ body{
   }
 
   li.first+li+li~li {
-    background-color: transparent;
+    // background-color: transparent;
   }
 
   .fa-user {
@@ -188,4 +188,9 @@ body{
     margin: 1rem auto;
     text-align: center;
   }
+}
+
+#img-avatar{
+  width: 300;
+  height: 400;
 }
