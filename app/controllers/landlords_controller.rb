@@ -2,7 +2,11 @@ class LandlordsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @landlords = Landlord.all
+    if params[:query].present?
+      @landlords = Landlord.global_search(params[:query])
+    else
+      @landlords = Landlord.all
+    end
   end
 
   def create
