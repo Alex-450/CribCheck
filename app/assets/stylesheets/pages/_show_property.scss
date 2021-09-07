@@ -67,6 +67,12 @@
       display: flex;
       flex-direction: column;
 
+      a {
+        color: inherit;
+        text-decoration: inherit;
+        font-weight: normal;
+      }
+
       header {
         display: flex;
         padding-top: 8px;
@@ -83,7 +89,7 @@
     }
 
     i {
-      color: white;
+      color: $call-to-action;
     }
   }
 
