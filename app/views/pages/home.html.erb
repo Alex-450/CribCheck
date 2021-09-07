@@ -7,115 +7,131 @@
   <div class="container">
     <div class="viewheight">
       <div class="banner-text p-3">
-        <h1 class="d-green bold"><span id="banner-typed-text"></span> </h1>
-        <p class="green semi-bold">No more surprises...</p>
-        <p class="green semi-bold">This is how it works!</p>
+        <div class="row">
+          <div class="col-8">
+            <h1 class="d-green bold">Check out your future apartment</h1>
+            <p class="green semi-bold text"><span id="banner-typed-text"></p>
+            <%# <p class="green semi-bold text">This is how it works!</p> %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="d-flex justify-content-center buttons">
+              <%= link_to 'Search landlord', landlords_path, class:"btn btn-action mx-3", id:"btn-banner"%>
+              <%= link_to 'Search property', properties_path, class:"btn btn-action mx-3", id:"btn-banner" %>
+            </div>
+          </div>
+        </div>
+          <img src="<%= asset_path('keylightno.svg')  %>" alt="" id="img-home">
       </div>
 
 
-      <div class="buttons justify-content-center">
-        <%= link_to 'Search landlord', landlords_path, class:"btn btn-action mx-3", id:"btn-banner"%>
-        <%= link_to 'Search property', properties_path, class:"btn btn-action mx-3", id:"btn-banner" %>
+      <section id="carousel">
+        <button class="scroll-left">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <ul>
+          <li>
+            <i class="fas fa-user"></i>
+            <div>
+            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+                <i class="fas fa-star black"></i>
+              <% end %>
+            </div>
+            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+          </li>
+          <li>
+            <i class="fas fa-user"></i>
+            <div>
+            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+                <i class="fas fa-star black"></i>
+              <% end %>
+            </div>
+            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+          </li>
+          <li class="first">
+            <i class="fas fa-user"></i>
+            <div>
+            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+                <i class="fas fa-star black"></i>
+              <% end %>
+            </div>
+            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+          </li>
+          <li>
+            <i class="fas fa-user"></i>
+            <div>
+            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+                <i class="fas fa-star black"></i>
+              <% end %>
+            </div>
+            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+          </li>
+          <li>
+            <i class="fas fa-user"></i>
+            <div>
+            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+                <i class="fas fa-star black"></i>
+              <% end %>
+            </div>
+            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+          </li>
+          <li>
+            <i class="fas fa-user"></i>
+            <div>
+            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+                <i class="fas fa-star black"></i>
+              <% end %>
+            </div>
+            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+          </li>
+          <li>
+            <i class="fas fa-user"></i>
+            <div>
+            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+                <i class="fas fa-star black"></i>
+              <% end %>
+            </div>
+            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+          </li>
+        </ul>
+        <button class="scroll-right">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+      <div id="circles-reviews" style="margin: 1rem auto; text-align: center;">
+        <i class="far fa-circle circle-review"></i>
+        <i class="far fa-circle circle-review"></i>
+        <i id="middle-circle" class="fas fa-circle circle-review"></i>
+        <i class="far fa-circle circle-review"></i>
+        <i class="far fa-circle circle-review"></i>
       </div>
     </div>
-
-      <div class="how-it-works d-flex justify-content-around">
+    <div class="how-it-works d-flex  flex-column">
+      <h2 class="bold my-3">This is how it works</h2>
+      <div class="d-flex justify-content-around">
         <div class="step">
           <img src="<%= asset_path('house.svg')  %>" alt="">
-          <h2 class="semi-bold"> Search</h2>
+          <p class="semi-bold">1. Find your property</p>
         </div>
         <div class="step">
           <img src="<%= asset_path('select.svg')  %>" alt="">
-          <h2 class="semi-bold">Select</h2>
+          <p class="semi-bold">2. Select the property</p>
         </div>
         <div class="step">
           <img src="<%= asset_path('review.svg')  %>" alt="">
-          <h2 class="semi-bold">Review</h2>
+          <p class="semi-bold">3. Leave a review!</p>
         </div>
       </div>
 
-    <section id="carousel">
-      <button class="scroll-left">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <ul>
-        <li>
-          <i class="fas fa-user"></i>
-          <div>
-          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
-              <i class="fas fa-star black"></i>
-            <% end %>
-          </div>
-          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
-        </li>
-        <li>
-          <i class="fas fa-user"></i>
-          <div>
-          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
-              <i class="fas fa-star black"></i>
-            <% end %>
-          </div>
-          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
-        </li>
-        <li class="first">
-          <i class="fas fa-user"></i>
-          <div>
-          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
-              <i class="fas fa-star black"></i>
-            <% end %>
-          </div>
-          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
-        </li>
-        <li>
-          <i class="fas fa-user"></i>
-          <div>
-          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
-              <i class="fas fa-star black"></i>
-            <% end %>
-          </div>
-          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
-        </li>
-        <li>
-          <i class="fas fa-user"></i>
-          <div>
-          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
-              <i class="fas fa-star black"></i>
-            <% end %>
-          </div>
-          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
-        </li>
-        <li>
-          <i class="fas fa-user"></i>
-          <div>
-          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
-              <i class="fas fa-star black"></i>
-            <% end %>
-          </div>
-          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
-        </li>
-        <li>
-          <i class="fas fa-user"></i>
-          <div>
-          <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
-              <i class="fas fa-star black"></i>
-            <% end %>
-          </div>
-          <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
-        </li>
-      </ul>
-      <button class="scroll-right">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </section>
-    <div id="circles-reviews" style="margin: 1rem auto; text-align: center;">
-      <i class="far fa-circle circle-review"></i>
-      <i class="far fa-circle circle-review"></i>
-      <i id="middle-circle" class="fas fa-circle circle-review"></i>
-      <i class="far fa-circle circle-review"></i>
-      <i class="far fa-circle circle-review"></i>
+     <p class="bold dark-green justify-content-center quote"> “Alone, we can do so little; together, we can do so much” – Helen Keller.</p>
     </div>
+ </div>
 
-    <div class="viewheighthalf">
+
+
+  <div class="white-home">
+    <div class="container">
       <div class="apartment-section">
         <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
@@ -285,6 +301,8 @@
       <!--/.Carousel Wrapper-->
       </div>
     </div>
-
   </div>
+
+
+
 </div>
