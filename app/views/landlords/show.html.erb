@@ -2,6 +2,12 @@
   <div class="row">
     <header class="col-12 text-center">
       <h1><%= @landlord.name %></h1>
+      <h2 class="text-dark">Average rating: <%= @landlord.average_rating_overall %></h2>
+      <h2 class="text-dark">Average property rating: <%= @landlord.average_property_rating %></h2>
+      <h2 class="text-dark">Average landlord rating: <%= @landlord.average_landlord_rating %></h2>
+      <h2 class="text-dark">Average communication rating: <%= @landlord.average_communication_rating %></h2>
+      <h2 class="text-dark">Average maintenance rating: <%= @landlord.average_maintenance_rating %></h2>
+      <h2 class="text-dark">Average cleanliness rating: <%= @landlord.average_cleanliness_rating %></h2>
     </header>
 
     <% if @properties.count > 0 %>
