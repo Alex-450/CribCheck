@@ -21,6 +21,17 @@ class PropertiesController < ApplicationController
     @property = Property.find(params[:id])
     @property.user = current_user
     @review = Review.new
+    unless @property.latitude.nil?
+      @markers = [@property].map do |p|
+        {
+          lat: p.latitude,
+          lng: p.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { property: p })
+        }
+      end
+    else
+      @markers = []
+    end
   end
 
   def new
