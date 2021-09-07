@@ -17,7 +17,7 @@
             <% lat = property.latitude  %>
             <% long = property.longitude %>
             <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
-            <p> <%= property.address %></p>
+            <p class="pt-2"> <%= property.address %></p>
             <p>Landlord: <%= property.landlord.name %></p>
             <p>Rating: ★★★☆☆</p>
             <p class="btn-submit">See property</p>
