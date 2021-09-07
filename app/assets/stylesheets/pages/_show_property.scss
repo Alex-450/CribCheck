@@ -3,6 +3,7 @@
 
   .card-show {
     text-align: left;
+    padding: 0 3rem;
   }
 
   .prop-info {
@@ -13,6 +14,24 @@
     i {
       padding-right: 4px;
       color: $call-to-action;
+    }
+  }
+
+  .prop-img-map {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    img {
+      width: 49%;
+      border-radius: 5px;
+
+    }
+
+    #map {
+      height: auto;
+      width: 49%;
+      border-radius: 5px;
     }
   }
 
