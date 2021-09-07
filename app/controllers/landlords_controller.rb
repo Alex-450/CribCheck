@@ -17,6 +17,7 @@ class LandlordsController < ApplicationController
   def show
     @landlord = Landlord.find(params[:id])
     @properties = @landlord.properties
+    @reviews = @landlord.reviews
     @markers = @properties.geocoded.map do |property|
       {
         lat: property.latitude,
