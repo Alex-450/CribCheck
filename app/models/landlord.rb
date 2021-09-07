@@ -3,6 +3,13 @@ class Landlord < ApplicationRecord
   validates :name, presence: true
   has_many :reviews, through: :properties
 
+  include PgSearch::Model
+  pg_search_scope :global_search,
+                  against: :name,
+                  using: {
+                    tsearch: { prefix: true }
+                  }
+
   def average_rating(rating_type)
     ratings = 0
     reviews.map { |review| ratings += review[rating_type].to_f }
