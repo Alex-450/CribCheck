@@ -38,6 +38,6 @@ class Landlord < ApplicationRecord
       average_maintenance_rating,
       average_cleanliness_rating
     )
-    @all_ratings.sum / 5
+    @all_ratings.sum / @all_ratings.count
   end
 end
