@@ -1,7 +1,9 @@
 <div class="container padding-200 d-flex justify-content-center">
   <div class="card-show-review ">
-    <img src="<%= asset_path('house.png') %>" alt=""> <br>
-    <section class="score d-flex justify-content-center m-3">
+        <% lat = @property.latitude  %>
+        <% long = @property.longitude %>
+        <img src="https://maps.googleapis.com/maps/api/streetview?size=1000x1000&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
+      <section class="score d-flex justify-content-center m-3">
       <div class="score-card">
         <table class="no-border table-width">
           <%# <thead>
