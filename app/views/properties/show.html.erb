@@ -15,6 +15,7 @@
         <p><span class="prop-info">Reviews: </span><%= @property.reviews.count %></p>
 
         <% if @property.reviews.any? %>
+          <h5>Average property rating: <%= @property.average_rating_overall %></h5>
           <% @property.reviews.each do |f|%>
             <div class="reviews">
               <div class="review-first-row">
