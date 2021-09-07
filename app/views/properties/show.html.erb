@@ -1,5 +1,6 @@
 <div id="property-container" class="container">
   <div class="row">
+    <%# Property address, landlord, img %>
     <div class="col-12 card-show">
       <% lat = @property.latitude  %>
       <% long = @property.longitude %>
@@ -8,6 +9,7 @@
       <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
       <p class="prop-info mt-3 score"><span>Overall score: </span><i class="fas fa-star"></i>5.0 (<%= @property.reviews.count %> reviews)</p>
 
+      <%# Property overall rating %>
       <div class="d-flex justify-content-between flex-wrap my-5 prop-rating" >
         <div>
           <p>Landlord overall rating</p>
@@ -61,108 +63,78 @@
     </div> <!-- .col -->
   </div> <!-- .row -->
 
+  <%# Property review %>
+
   <div class="card-new-review" id="toggle-review" style="display:none;">
-    <%= simple_form_for [@property, @review] do |f| %>
-      <div class="form-inputs">
-        <%# Landlord rating %>
-        <div class="card-new-header bold justify-content-center">Add a review</div>
-        <p class="bold">Landlord rating:</p>
-        <div class="numbers d-flex  justify-content-between">
-          <p class="bold">1</p>
-          <p class="bold">2</p>
-          <p class="bold">3</p>
-          <p class="bold">4</p>
-          <p class="bold">5</p>
+    <div class="card-new-header justify-content-center">Leave a review</div>
+    <div class="card-new-body">
+      <%= simple_form_for [@property, @review] do |f| %>
+        <div class="form-inputs">
+          <%# Landlord rating %>
+          <p class="bold">Landlord rating:</p>
+          <div class="numbers d-flex  justify-content-between">
+            <p class="bold">1</p>
+            <p class="bold">2</p>
+            <p class="bold">3</p>
+            <p class="bold">4</p>
+            <p class="bold">5</p>
+          </div>
+          <div data-controller="range-slider-landlord">
+            <input type="range" min="1" max="5" value="3" class="range" id="range" data-target="range-slider-landlord.range" data-action="input->range-slider-landlord#updateValue">
+            <%= f.input :landlord_rating, as: :hidden, input_html: { data: { target: "range-slider-landlord.hidden"}}, collection: 0..5 %>
+          </div>
+          <%# Property rating %>
+          <p class="bold">Property rating:</p>
+          <div class="numbers d-flex  justify-content-between">
+            <p class="bold">1</p>
+            <p class="bold">2</p>
+            <p class="bold">3</p>
+            <p class="bold">4</p>
+            <p class="bold">5</p>
+          </div>
+          <div data-controller="range-slider-property">
+            <input type="range" min="1" max="5" value="3" class="range" data-target="range-slider-property.range" data-action="input->range-slider-property#updateValue">
+            <%= f.input :property_rating, as: :hidden, input_html: { data: { target: "range-slider-property.hidden"}}, collection: 0..5 %>
+          </div>
+          <%# Communication %>
+          <p class="bold">Communication:</p>
+          <div class="numbers d-flex  justify-content-between">
+            <p class="bold">1</p>
+            <p class="bold">2</p>
+            <p class="bold">3</p>
+            <p class="bold">4</p>
+            <p class="bold">5</p>
+          </div>
+          <div data-controller="range-slider-communication">
+            <input type="range" min="1" max="5" value="3" class="range" data-target="range-slider-communication.range" data-action="input->range-slider-communication#updateValue">
+            <%= f.input :communication, as: :hidden, input_html: { data: { target: "range-slider-communication.hidden"}}, collection: 0..5 %>
+          </div>
+          <%# cleanliness %>
+          <p class="bold">Cleanliness:</p>
+          <div class="numbers d-flex  justify-content-between">
+            <p class="bold">1</p>
+            <p class="bold">2</p>
+            <p class="bold">3</p>
+            <p class="bold">4</p>
+            <p class="bold">5</p>
+          </div>
+          <div data-controller="range-slider-cleanliness">
+            <input type="range" min="1" max="5" value="3" class="range" data-target="range-slider-cleanliness.range" data-action="input->range-slider-cleanliness#updateValue">
+            <%= f.input :cleanliness, as: :hidden, input_html: { data: { target: "range-slider-cleanliness.hidden"}}, collection: 0..5 %>
+          </div>
+          <%= f.input :landlord_comment, placeholder: "Type your review..." , :label_html => { :class => 'bold text-input' }%>
+          <%= f.input :property_comment, placeholder: "Type your review...", :label_html => { :class => 'bold text-input' } %>
+          <%= f.input :rental_cost, :label_html => { :class => 'bold' } %>
+          <div class="d-flex justify-content-between">
+            <%= f.input :photos, input_html: { class: 'd-none' }, label_html: { class: 'btn btn-action'}, label: '📷 Upload a photo', as: :file %>
+            <%= f.button :submit, class:"btn btn-submit " %>
+          </div>
         </div>
-        <div data-controller="range-slider-landlord">
-          <input type="range" min="1" max="5" value="3" class="range" id="range" data-target="range-slider-landlord.range" data-action="input->range-slider-landlord#updateValue">
-
-          <%= f.input :landlord_rating, as: :hidden, input_html: { data: { target: "range-slider-landlord.hidden"}}, collection: 0..5 %>
+        <div class="form-actions">
         </div>
-
-        <%# Property rating %>
-        <p class="bold">Property rating:</p>
-        <div class="numbers d-flex  justify-content-between">
-          <p class="bold">1</p>
-          <p class="bold">2</p>
-          <p class="bold">3</p>
-          <p class="bold">4</p>
-          <p class="bold">5</p>
-        </div>
-        <div data-controller="range-slider-property">
-          <input type="range" min="1" max="5" value="3" class="range" data-target="range-slider-property.range" data-action="input->range-slider-property#updateValue">
-          <%= f.input :property_rating, as: :hidden, input_html: { data: { target: "range-slider-property.hidden"}}, collection: 0..5 %>
-        </div>
-
-     <div class="card-new-review" id="toggle-review" style="display:none;">
-        <div class="card-new-header justify-content-center">Leave a review</div>
-        <div class="card-new-body">
-          <%= simple_form_for [@property, @review] do |f| %>
-            <div class="form-inputs">
-              <%# Landlord rating %>
-              <p class="bold">Landlord rating:</p>
-              <div class="numbers d-flex  justify-content-between">
-                <p class="bold">1</p>
-                <p class="bold">2</p>
-                <p class="bold">3</p>
-                <p class="bold">4</p>
-                <p class="bold">5</p>
-              </div>
-              <div data-controller="range-slider-landlord">
-                <input type="range" min="1" max="5" value="3" class="range" id="range" data-target="range-slider-landlord.range" data-action="input->range-slider-landlord#updateValue">
-                <%= f.input :landlord_rating, as: :hidden, input_html: { data: { target: "range-slider-landlord.hidden"}}, collection: 0..5 %>
-              </div>
-              <%# Property rating %>
-              <p class="bold">Property rating:</p>
-              <div class="numbers d-flex  justify-content-between">
-                <p class="bold">1</p>
-                <p class="bold">2</p>
-                <p class="bold">3</p>
-                <p class="bold">4</p>
-                <p class="bold">5</p>
-              </div>
-              <div data-controller="range-slider-property">
-                <input type="range" min="1" max="5" value="3" class="range" data-target="range-slider-property.range" data-action="input->range-slider-property#updateValue">
-                <%= f.input :property_rating, as: :hidden, input_html: { data: { target: "range-slider-property.hidden"}}, collection: 0..5 %>
-              </div>
-              <%# Communication %>
-              <p class="bold">Communication:</p>
-              <div class="numbers d-flex  justify-content-between">
-                <p class="bold">1</p>
-                <p class="bold">2</p>
-                <p class="bold">3</p>
-                <p class="bold">4</p>
-                <p class="bold">5</p>
-              </div>
-              <div data-controller="range-slider-communication">
-                <input type="range" min="1" max="5" value="3" class="range" data-target="range-slider-communication.range" data-action="input->range-slider-communication#updateValue">
-                <%= f.input :communication, as: :hidden, input_html: { data: { target: "range-slider-communication.hidden"}}, collection: 0..5 %>
-              </div>
-              <%# cleanliness %>
-              <p class="bold">Cleanliness:</p>
-              <div class="numbers d-flex  justify-content-between">
-                <p class="bold">1</p>
-                <p class="bold">2</p>
-                <p class="bold">3</p>
-                <p class="bold">4</p>
-                <p class="bold">5</p>
-              </div>
-              <div data-controller="range-slider-cleanliness">
-                <input type="range" min="1" max="5" value="3" class="range" data-target="range-slider-cleanliness.range" data-action="input->range-slider-cleanliness#updateValue">
-                <%= f.input :cleanliness, as: :hidden, input_html: { data: { target: "range-slider-cleanliness.hidden"}}, collection: 0..5 %>
-              </div>
-              <%= f.input :landlord_comment, placeholder: "Type your review..." , :label_html => { :class => 'bold text-input' }%>
-              <%= f.input :property_comment, placeholder: "Type your review...", :label_html => { :class => 'bold text-input' } %>
-              <%= f.input :rental_cost, :label_html => { :class => 'bold' } %>
-              <div class="d-flex justify-content-between">
-                <%= f.input :photos, input_html: { class: 'd-none' }, label_html: { class: 'btn btn-action'}, label: '📷 Upload a photo', as: :file %>
-                <%= f.button :submit, class:"btn btn-submit " %>
-              </div>
-            </div>
-            <div class="form-actions">
-            </div>
-          <% end %>
-        </div>
-      </div>
+      <% end %>
+    </div>
   </div>
+
+
 </div>
