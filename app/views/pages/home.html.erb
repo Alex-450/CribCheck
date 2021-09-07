@@ -32,16 +32,16 @@
         </button>
         <ul>
           <li>
-            <i class="fas fa-user"></i>
+            <img src="<%= asset_path('avatar1')  %>" alt="" id="avatar-img">
             <div>
             <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
-                <i class="fas fa-star black"></i>
+                <img src="" alt="">
               <% end %>
             </div>
             <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
           </li>
           <li>
-            <i class="fas fa-user"></i>
+            <img src="<%= asset_path('avatar2')  %>" alt="" id="avatar-img">
             <div>
             <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
                 <i class="fas fa-star black"></i>
@@ -50,7 +50,7 @@
             <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
           </li>
           <li class="first">
-            <i class="fas fa-user"></i>
+            <img src="<%= asset_path('avatar3')  %>" alt="" id="avatar-img">
             <div>
             <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
                 <i class="fas fa-star black"></i>
@@ -59,7 +59,7 @@
             <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
           </li>
           <li>
-            <i class="fas fa-user"></i>
+            <img src="<%= asset_path('avatar4')  %>" alt="" id="avatar-img">
             <div>
             <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
                 <i class="fas fa-star black"></i>
@@ -68,7 +68,7 @@
             <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
           </li>
           <li>
-            <i class="fas fa-user"></i>
+            <img src="<%= asset_path('avatar5')  %>" alt="" id="avatar-img">
             <div>
             <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
                 <i class="fas fa-star black"></i>
@@ -77,7 +77,7 @@
             <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
           </li>
           <li>
-            <i class="fas fa-user"></i>
+            <img src="<%= asset_path('avatar6')  %>" alt="" id="avatar-img">
             <div>
             <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
                 <i class="fas fa-star black"></i>
@@ -86,7 +86,7 @@
             <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
           </li>
           <li>
-            <i class="fas fa-user"></i>
+            <img src="<%= asset_path('avatar7')  %>" alt="" id="avatar-img">
             <div>
             <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
                 <i class="fas fa-star black"></i>
