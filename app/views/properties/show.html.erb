@@ -45,10 +45,10 @@
           <li>
         <%= link_to property_review_path(@property, review) do %>
             <header>
-              <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png"/>
+              <img src="<%= url_for(review.user.avatar) %>"/>
               <div>
-                <div>John</div>
-                <div class="review-date"><em>September 2021</em></div>
+                <div><%= "#{review.user.first_name} #{review.user.last_name}" %></div>
+                <div class="review-date"><em><%= review.created_at %></em></div>
               </div>
               <p>
                 <% if review.property_rating.nil? %>
