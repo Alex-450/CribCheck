@@ -12,10 +12,13 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Landlords", landlords_path, class: "nav-link" %>
+          <%= link_to "Landlords", landlords_path, class: "nav-link", id:"landbtn"  %>
         </li>
         <li class="nav-item">
-          <%= link_to "Properties", properties_path, class: "nav-link" %>
+          <%= link_to "Properties", properties_path, class: "nav-link", id:"propbtn" %>
+        </li>
+        <li class="nav-item"  id="signoutnav">
+          <%= link_to "Signout", destroy_user_session_path, method: :delete %>
         </li>
         <li class="nav-item">
           <%= link_to "Add property", new_property_path, class: "btn btn-submit", id:"btnnav" %>
@@ -23,7 +26,7 @@
       </ul>
 
         <section class="section">
-          <div class="menu-btn__wrapper">
+          <div class="menu-btn__wrapper" id="burger">
             <div class="menu-block">
               <nav class="menu-nav with-border">
                 <a class="menu-nav__link">

@@ -155,3 +155,35 @@ li > a {
     }
   }
 }
+#signoutnav{
+  visibility: hidden;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  #btnnav {
+    visibility: hidden;
+
+    display: none;
+  }
+
+  #burger {
+    visibility: hidden;
+
+    display: none;
+  }
+
+  #signoutnav{
+    visibility: visible;
+  }
+
+  .navbar-lewagon-white{
+    background-color: $white;
+  }
+  .navbar-lewagon {
+  justify-content: space-between;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+  padding-bottom: 16px;
+}
+}
