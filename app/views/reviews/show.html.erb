@@ -1,8 +1,17 @@
 <div class="container padding-200 d-flex justify-content-center">
   <div class="card-show-review ">
-        <% lat = @property.latitude  %>
-        <% long = @property.longitude %>
-        <img src="https://maps.googleapis.com/maps/api/streetview?size=1000x1000&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
+        <% if @review.photos.attached?%>
+          <div class="d-flex justify-content-between" >
+            <% lat = @property.latitude  %>
+            <% long = @property.longitude %>
+            <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="" class="img-review">
+            <img src="<%= cl_image_path @review.photos.key, width: 400, height: 400, crop: :fill %>" alt="picture of the house" class="img-review">
+          </div>
+          <% else  %>
+            <% lat = @property.latitude  %>
+            <% long = @property.longitude %>
+            <img src="https://maps.googleapis.com/maps/api/streetview?size=1000x1000&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
+          <% end %>
       <section class="score d-flex justify-content-center m-3">
       <div class="score-card">
         <table class="no-border table-width">
