@@ -15,15 +15,17 @@
 
 #review_landlord_comment {
   border-radius: 10px;
+  font-size: 1rem;
 }
 #review_property_comment {
   border-radius: 10px;
+  font-size: 1rem;
 }
 #review_rental_cost {
   border-radius: 10px;
 }
 .card-new-review {
-  width: 665px;
+  // width: 665px;
   background-color: $white;
   margin: 0 auto;
   border-radius: 0px 0px 10px 10px;

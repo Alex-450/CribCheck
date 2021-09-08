@@ -196,13 +196,18 @@ body{
   border-radius: 50%;
 }
 
+.small-bold {
+  font-size: 13px;
+  font-weight: bold;
+}
+
 .no-margin{
   margin: 0;
 }
 
 
 @media screen and (max-width: 600px) {
-  #home1, #home3, #img-home, .text, #carousel, .quote {
+  #home1, #home3, #img-home, .text, #carousel, .quote, #circles-reviews {
     visibility: hidden;
     display: none;
   }
