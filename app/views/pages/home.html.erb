@@ -37,7 +37,8 @@
               <p class="no-margin"> <strong> - <%= @reviews[1].user.first_name  %></strong></p>
             </div>
             <div>
-            <% @reviews[1].average_rating_overall do %>
+            <% @reviews[1].property.average_rating_overall do %>
+            <p><%= @reviews[1].property.average_rating_overall %></p>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
