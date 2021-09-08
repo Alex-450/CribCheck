@@ -14,8 +14,8 @@
             <%# <p class="green semi-bold text">This is how it works!</p> %>
           </div>
         </div>
-        <div class="row">
-          <div class="col-6">
+        <div >
+          <div >
             <div class="d-flex justify-content-center buttons">
               <%= link_to 'Search landlord', landlords_path, class:"btn btn-action mx-3", id:"btn-banner"%>
               <%= link_to 'Search property', properties_path, class:"btn btn-action mx-3", id:"btn-banner" %>
@@ -118,7 +118,6 @@
         <button class="scroll-right">
           <i class="fas fa-chevron-right"></i>
         </button>
-      </section>
       <div id="circles-reviews" style="margin: 1rem auto; text-align: center;">
         <i class="far fa-circle circle-review"></i>
         <i class="far fa-circle circle-review"></i>
@@ -126,10 +125,11 @@
         <i class="far fa-circle circle-review"></i>
         <i class="far fa-circle circle-review"></i>
       </div>
+      </section>
     </div>
     <div class="how-it-works d-flex  flex-column">
       <h2 class="bold my-3">This is how it works</h2>
-      <div class="d-flex justify-content-around">
+      <div class="d-flex justify-content-around how-it-works-mobile">
         <div class="step">
           <img src="<%= asset_path('house.svg')  %>" alt="">
           <p class="semi-bold">1. Find your property</p>
