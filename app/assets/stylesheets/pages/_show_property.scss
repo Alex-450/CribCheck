@@ -139,3 +139,30 @@
 
   }
 }
+
+.show-title, .show-overal-mob{
+  visibility: hidden;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .hidden-mob{
+    visibility: hidden;
+    display: none;
+  }
+
+  .show-overal-mob{
+    padding-top: 100px;
+
+  }
+
+  .show-title, .show-overal-mob{
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .show-mob{
+    padding-top: 2rem;
+  }
+}
