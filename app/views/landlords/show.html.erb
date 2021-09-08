@@ -3,12 +3,33 @@
     <header class="col-12 text-center">
       <h1><%= @landlord.name %></h1>
       <% if @landlord.reviews.count > 0 %>
-        <h2 class="text-dark">Average rating: <%= @landlord.average_rating_overall %></h2>
-        <h2 class="text-dark">Average property rating: <%= @landlord.average_property_rating %></h2>
-        <h2 class="text-dark">Average landlord rating: <%= @landlord.average_landlord_rating %></h2>
-        <h2 class="text-dark">Average communication rating: <%= @landlord.average_communication_rating %></h2>
-        <h2 class="text-dark">Average maintenance rating: <%= @landlord.average_maintenance_rating %></h2>
-        <h2 class="text-dark">Average cleanliness rating: <%= @landlord.average_cleanliness_rating %></h2>
+        <%# Landlord overall rating %>
+        <div class="d-flex justify-content-between flex-wrap my-5 mx-5 prop-rating" >
+          <div>
+            <p>Overall rating</p>
+            <p class="rating-slider" style="--rating: <%= @landlord.average_rating_overall * 20 %>%"></p>
+          </div>
+          <div>
+            <p>Average property rating</p>
+            <p class="rating-slider" style="--rating: <%= @landlord.average_property_rating * 20 %>%"></p>
+          </div>
+          <div>
+            <p>Average landlord rating</p>
+            <p class="rating-slider" style="--rating: <%= @landlord.average_landlord_rating * 20 %>%"></p>
+          </div>
+          <div>
+            <p>Average communication rating</p>
+            <p class="rating-slider" style="--rating: <%= @landlord.average_communication_rating * 20 %>%"></p>
+          </div>
+          <div>
+            <p>Average maintenance rating</p>
+            <p class="rating-slider" style="--rating: <%= @landlord.average_maintenance_rating * 20 %>%"></p>
+          </div>
+          <div>
+            <p>Average cleanliness rating</p>
+            <p class="rating-slider" style="--rating: <%= @landlord.average_cleanliness_rating * 20 %>%"></p>
+          </div>
+        </div>
       <% end %>
     </header>
 
