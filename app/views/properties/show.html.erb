@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@property.address} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @property.address %>
+<%# <% content_for :meta_image, cl_image_path(@property.photo.path) %>
+
 <div id="property-container" class="container">
   <div class="row">
     <%# Property address, landlord, img %>
