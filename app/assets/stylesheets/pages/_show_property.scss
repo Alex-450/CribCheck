@@ -140,6 +140,33 @@
   }
 }
 
+.show-title, .show-overal-mob{
+  visibility: hidden;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .hidden-mob{
+    visibility: hidden;
+    display: none;
+  }
+
+  .show-overal-mob{
+    padding-top: 100px;
+
+  }
+
+  .show-title, .show-overal-mob{
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .show-mob{
+    padding-top: 2rem;
+    
+  }
+  
 .review-comments {
   font-size: 1.2rem;
 }
@@ -152,6 +179,6 @@
   }
 
   .modal-content {
-    border-radius: 10px;
+    border-radius: 10px
   }
 }
