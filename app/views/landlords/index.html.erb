@@ -1,4 +1,4 @@
-<div class="container-fluid px-0" style="padding-top:200px;">
+<div class="container-fluid px-0 padding-200" >
         <div class="row">
           <div class="col-12">
             <h1 class="text-center">Landlords</h1>
@@ -20,7 +20,7 @@
           <% @landlords.each do |landlord| %>
                 <%= link_to landlord_path(landlord) do %>
                   <div class="table-body">
-                    <p class="table-item-left"><%= landlord.name %></p>
+                    <p class="table-item-center"><%= landlord.name %></p>
                     <p class="table-item-center"><%= landlord.properties.count %></p>
                     <p class="table-item-right">★★★</p>
                   </div>

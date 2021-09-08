@@ -1,4 +1,5 @@
 require 'faker'
+require 'open-uri'
 
 addresses = [
   "Ferdinand Bolstraat 44-54, Amsterdam",
@@ -66,25 +67,51 @@ negative_property_reviews = [
   "Needs some TLC, landlord hasn't renovated in about 20 years by the looks of it"
 ]
 
-puts "clearing properties, reviews and landlords"
+puts "Clearing properties, reviews and landlords"
 
 Property.destroy_all
 Review.destroy_all
 Landlord.destroy_all
+seeded_users = User.where(location: "Tokyo")
+
+seeded_users.each do |user|
+  User.find(user.id).destroy
+end
+
+puts "Creating users..."
+
+y = 1
+
+10.times do
+  first_name = Faker::Name.unique.first_name
+  last_name = Faker::Name.unique.last_name
+  password = Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 3, min_numeric: 3)
+  user = User.create(
+    first_name: first_name,
+    last_name: last_name,
+    location: "Tokyo",
+    email: "#{first_name}.#{last_name}@gmail.com",
+    password: password,
+    password_confirmation: password
+  )
+  user.avatar.attach(io: File.open(Rails.root.join("app/assets/images/user_avatars/#{y}.png")), filename: "avatar1.jpg")
+  p "created #{User.last}"
+  y += 1
+end
 
 puts "Creating landlords..."
 
 5.times do
-  Landlord.create(name: Faker::Name.unique.name)
+  Landlord.create(name: "#{Faker::Name.unique.first_name} #{Faker::Name.unique.last_name}")
 end
 
 landlord_ids = Landlord.all.ids
-user_ids = User.all.ids
+user_ids = User.where(location: "Tokyo").all.ids
 
 puts "Creating properties..."
 i = 0
 10.times do
-  Property.create(user_id: user_ids.sample, landlord_id: landlord_ids.sample, address: addresses[i])
+  Property.create(user_id: user_ids[i], landlord_id: landlord_ids.sample, address: addresses[i])
   i += 1
   puts "created: #{Property.last.address}"
 end
@@ -92,16 +119,14 @@ end
 puts "Creating reviews..."
 
 property_ids = Property.all.ids
-p property_ids
-users = User.all.ids
 positive_rating = (3..5).to_a
-negative_rating = (1..3).to_a
+negative_rating = (1..2).to_a
 rental_cost = (700..1000).to_a
 
 x = 0
 5.times do
   Review.create!(
-    user_id: users.sample,
+    user_id: user_ids[x],
     property_id: property_ids[x],
     landlord_rating: positive_rating.sample,
     property_rating: positive_rating.sample,
@@ -119,7 +144,7 @@ end
 x = 4
 5.times do
   Review.create!(
-    user_id: users.sample,
+    user_id: user_ids[x],
     property_id: property_ids[x + 1],
     landlord_rating: negative_rating.sample,
     property_rating: negative_rating.sample,

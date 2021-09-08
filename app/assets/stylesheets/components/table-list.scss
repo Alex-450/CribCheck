@@ -56,3 +56,16 @@
 #landlord-list a {
   text-decoration: none;
 }
+
+@media screen and (max-width: 600px) {
+  .col-8 {
+    max-width: 90%;
+  }
+  .padding-200{
+    padding-top: 100px;
+  }
+
+  .table-body > p {
+    text-align: center;
+  }
+}

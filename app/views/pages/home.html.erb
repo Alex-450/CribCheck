@@ -14,8 +14,8 @@
             <%# <p class="green semi-bold text">This is how it works!</p> %>
           </div>
         </div>
-        <div class="row">
-          <div class="col-6">
+        <div >
+          <div >
             <div class="d-flex justify-content-center buttons">
               <%= link_to 'Search landlord', landlords_path, class:"btn btn-action mx-3", id:"btn-banner"%>
               <%= link_to 'Search property', properties_path, class:"btn btn-action mx-3", id:"btn-banner" %>
@@ -33,12 +33,11 @@
         <ul>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= asset_path('avatar1')  %>" alt="" id="avatar-img">
+              <img src="<%= asset_path('/user_avatars/avatar1')  %>" alt="" id="avatar-img">
               <p class="no-margin"> <strong> - <%= @reviews[1].user.first_name  %></strong></p>
             </div>
             <div>
-            <% @reviews[1].property.average_rating_overall do %>
-            <p><%= @reviews[1].property.average_rating_overall %></p>
+            <%= @reviews[1].property.average_rating_overall.to_i.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
@@ -46,80 +45,79 @@
           </li>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= asset_path('avatar2')  %>" alt="" id="avatar-img">
+              <img src="<%= asset_path('/user_avatars/avatar2')  %>" alt="" id="avatar-img">
               <p class="no-margin"> <strong> - <%=@reviews[2].user.first_name  %></strong></p>
             </div>            <div>
-            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+            <% @reviews[2].property.average_rating_overall.to_i.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
-            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+            <p><em><%= @reviews[2].property_comment %></em></p>
           </li>
           <li class="first">
             <div class="d-flex align-items-center">
-              <img src="<%= asset_path('avatar3')  %>" alt="" id="avatar-img">
-              <p class="no-margin"> <strong> - <%=Review.find(Review.pluck(:id).sample).user.first_name  %></strong></p>
+              <img src="<%= asset_path('user_avatars/3.png')  %>" alt="" id="avatar-img">
+              <p class="no-margin"> <strong> - <%= @reviews[3].user.first_name  %></strong></p>
             </div>
             <div>
-            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+            <% @reviews[3].property.average_rating_overall.to_i.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
-            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+            <p><em><%= @reviews[3].property_comment %></em></p>
           </li>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= asset_path('avatar3')  %>" alt="" id="avatar-img">
-              <p class="no-margin"> <strong> - <%=Review.find(Review.pluck(:id).sample).user.first_name  %></strong></p>
+              <img src="<%= asset_path('user_avatars/3.png')  %>" alt="" id="avatar-img">
+              <p class="no-margin"> <strong> - <%= @reviews[4].user.first_name  %></strong></p>
             </div>
             <div>
-            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+            <% @reviews[4].property.average_rating_overall.to_i.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
-            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+            <p><em><%= @reviews[4].property_comment %></em></p>
           </li>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= asset_path('avatar4')  %>" alt="" id="avatar-img">
-              <p class="no-margin"> <strong> - <%=Review.find(Review.pluck(:id).sample).user.first_name  %></strong></p>
+              <img src="<%= asset_path('user_avatars/4.png')  %>" alt="" id="avatar-img">
+              <p class="no-margin"> <strong> - <%= @reviews[5].user.first_name  %></strong></p>
             </div>
             <div>
-            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+            <% @reviews[5].property.average_rating_overall.to_i.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
-            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+            <p><em><%= @reviews[5].property_comment %></em></p>
           </li>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= asset_path('avatar5')  %>" alt="" id="avatar-img">
-              <p class="no-margin"> <strong> - <%=Review.find(Review.pluck(:id).sample).user.first_name  %></strong></p>
+              <img src="<%= asset_path('user_avatars/5.png')  %>" alt="" id="avatar-img">
+              <p class="no-margin"> <strong> - <%= @reviews[1].user.first_name  %></strong></p>
             </div>
            <div>
-            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+            <% @reviews[1].property.average_rating_overall.to_i.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
-            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+            <p><em><%= @reviews[1].property_comment %></em></p>
           </li>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= asset_path('avatar6')  %>" alt="" id="avatar-img">
-              <p class="no-margin"> <strong> - <%=Review.find(Review.pluck(:id).sample).user.first_name  %></strong></p>
+              <img src="<%= asset_path('user_avatars/6.png')  %>" alt="" id="avatar-img">
+              <p class="no-margin"> <strong> - <%= @reviews[2].user.first_name  %></strong></p>
             </div>
             <div>
-            <% Review.find(Review.pluck(:id).sample).property_rating.times do %>
+            <% @reviews[2].property.average_rating_overall.to_i.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
-            <p><em><%= Review.find(Review.pluck(:id).sample).property_comment %></em></p>
+            <p><em><%= @reviews[2].property_comment %></em></p>
           </li>
         </ul>
         <button class="scroll-right">
           <i class="fas fa-chevron-right"></i>
         </button>
-      </section>
       <div id="circles-reviews" style="margin: 1rem auto; text-align: center;">
         <i class="far fa-circle circle-review"></i>
         <i class="far fa-circle circle-review"></i>
@@ -127,10 +125,11 @@
         <i class="far fa-circle circle-review"></i>
         <i class="far fa-circle circle-review"></i>
       </div>
+      </section>
     </div>
     <div class="how-it-works d-flex  flex-column">
       <h2 class="bold my-3">This is how it works</h2>
-      <div class="d-flex justify-content-around">
+      <div class="d-flex justify-content-around how-it-works-mobile">
         <div class="step">
           <img src="<%= asset_path('house.svg')  %>" alt="">
           <p class="semi-bold">1. Find your property</p>
