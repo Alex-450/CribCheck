@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
 
   def show
     @review = Review.find(params[:id])
-    @property = Property.find(params[:id])
+    @property = Property.find(params[:property_id])
   end
 
   def new
