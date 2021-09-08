@@ -189,22 +189,38 @@
 
 
               <div class="card-slider">
-                  <img src="<%= asset_path('house-slider-1')  %>" alt="">
-                  <p><%= @properties[1].address %></p>
+                <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=@properties[1].latitude%>,<%=@properties[5].longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
+                  <p><%= truncate(@properties[1].address) %></p>
                   <p><%= @properties[1].landlord.name %></p>
-                  <p> Rating: ★★★☆☆ </p>
-                  <p class="btn-submit ">See property</p>
+                  <div>
+                    <p>
+                      <% @properties[1].average_rating_overall.to_i.times do %>
+                        <i class="fas fa-star black"></i>
+                      <% end %>
+                    </p>
+                  </div>
+                  <%= link_to property_path(@properties[1].id) do %>
+                    <p class="btn-submit text-center">See property</p>
+                  <% end %>
               </div>
 
               </div>
 
               <div class="col-md-4 clearfix d-none d-md-block">
               <div class="card-slider">
-                  <img src="<%= asset_path('house-slider-2')  %>" alt="">
-                  <p><%= @properties[2].address %></p>
+                <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=@properties[2].latitude%>,<%=@properties[5].longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
+                  <p><%= truncate(@properties[2].address) %></p>
                   <p><%= @properties[2].landlord.name %></p>
-                  <p>Rating: ★★★☆☆</p>
-                  <p class="btn-submit ">See property</p>
+                  <div>
+                    <p>
+                      <% @properties[2].average_rating_overall.to_i.times do %>
+                        <i class="fas fa-star black"></i>
+                      <% end %>
+                    </p>
+                  </div>
+                  <%= link_to property_path(@properties[2].id) do %>
+                    <p class="btn-submit text-center">See property</p>
+                  <% end %>
 
               </div>
 
@@ -212,11 +228,19 @@
 
               <div class="col-md-4 clearfix d-none d-md-block">
               <div class="card-slider">
-                  <img src="<%= asset_path('house-slider-3')  %>" alt="">
-                  <p><%= @properties[3].address %></p>
+                <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=@properties[3].latitude%>,<%=@properties[5].longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
+                  <p><%= truncate(@properties[3].address) %></p>
                   <p><%= @properties[3].landlord.name %></p>
-                  <p>Rating: ★★★☆☆</p>
-                  <p class="btn-submit ">See property</p>
+                  <div>
+                    <p>
+                      <% @properties[3].average_rating_overall.to_i.times do %>
+                        <i class="fas fa-star black"></i>
+                      <% end %>
+                    </p>
+                  </div>
+                  <%= link_to property_path(@properties[3].id) do %>
+                    <p class="btn-submit text-center">See property</p>
+                  <% end %>
 
               </div>
 
@@ -232,11 +256,19 @@
             <div class="row">
               <div class="col-md-4">
               <div class="card-slider">
-                  <img src="<%= asset_path('house-slider-4')  %>" alt="">
-                  <p><%= @properties[4].address %></p>
+                <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=@properties[4].latitude%>,<%=@properties[5].longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
+                  <p><%= truncate(@properties[4].address) %></p>
                   <p><%= @properties[4].landlord.name %></p>
-                  <p>Rating: ★★★☆☆</p>
-                  <p class="btn-submit ">See property</p>
+                  <div>
+                    <p>
+                      <% @properties[4].average_rating_overall.to_i.times do %>
+                        <i class="fas fa-star black"></i>
+                      <% end %>
+                    </p>
+                  </div>
+                  <%= link_to property_path(@properties[4].id) do %>
+                    <p class="btn-submit text-center">See property</p>
+                  <% end %>
 
               </div>
 
@@ -246,10 +278,18 @@
               <div class="col-md-4 clearfix d-none d-md-block">
               <div class="card-slider">
                   <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=@properties[5].latitude%>,<%=@properties[5].longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
-                  <p><%= @properties[5].address %></p>
+                  <p><%= truncate(@properties[5].address) %></p>
                   <p><%= @properties[5].landlord.name %></p>
-                  <p>Rating: ★★★☆☆</p>
-                  <p class="btn-submit ">See property</p>
+                  <div>
+                    <p>
+                      <% @properties[5].average_rating_overall.to_i.times do %>
+                        <i class="fas fa-star black"></i>
+                      <% end %>
+                    </p>
+                  </div>
+                  <%= link_to property_path(@properties[5].id) do %>
+                    <p class="btn-submit text-center">See property</p>
+                  <% end %>
               </div>
 
 
@@ -258,16 +298,19 @@
               <div class="col-md-4 clearfix d-none d-md-block">
               <div class="card-slider">
                 <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=@properties[6].latitude%>,<%=@properties[6].longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
-                  <p><%= @properties[6].address %></p>
+                  <p><%= truncate(@properties[6].address) %></p>
                   <p><%= @properties[6].landlord.name %></p>
-                  <p>Rating: ★★★☆☆</p>
-                  <p class="btn-submit ">See property</p>
+                  <div>
+                    <p>
+                      <% @properties[6].average_rating_overall.to_i.times do %>
+                        <i class="fas fa-star black"></i>
+                      <% end %>
+                    </p>
+                  </div>
+                  <%= link_to property_path(@properties[6].id) do %>
+                    <p class="btn-submit text-center">See property</p>
+                  <% end %>
               </div>
-
-
-
-
-
               </div>
             </div>
 
@@ -281,10 +324,18 @@
               <div class="col-md-4">
               <div class="card-slider">
                 <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=@properties[7].latitude%>,<%=@properties[7].longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
-                  <p><%= @properties[7].address %></p>
+                  <p><%= truncate(@properties[7].address) %></p>
                   <p><%= @properties[7].landlord.name %></p>
-                  <p>Rating: ★★★☆☆</p>
-                  <p class="btn-submit ">See property</p>
+                  <div>
+                    <p>
+                      <% @properties[7].average_rating_overall.to_i.times do %>
+                        <i class="fas fa-star black"></i>
+                      <% end %>
+                    </p>
+                  </div>
+                  <%= link_to property_path(@properties[7].id) do %>
+                    <p class="btn-submit text-center">See property</p>
+                  <% end %>
               </div>
 
 
@@ -293,10 +344,18 @@
               <div class="col-md-4 clearfix d-none d-md-block">
               <div class="card-slider">
                 <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=@properties[8].latitude%>,<%=@properties[8].longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
-                  <p><%= @properties[8].address %></p>
+                  <p><%= truncate(@properties[8].address) %></p>
                   <p><%= @properties[8].landlord.name %></p>
-                  <p>Rating: ★★★☆☆</p>
-                  <p class="btn-submit ">See property</p>
+                  <div>
+                    <p>
+                      <% @properties[8].average_rating_overall.to_i.times do %>
+                        <i class="fas fa-star black"></i>
+                      <% end %>
+                    </p>
+                  </div>
+                  <%= link_to property_path(@properties[8].id) do %>
+                    <p class="btn-submit text-center">See property</p>
+                  <% end %>
               </div>
 
 
@@ -305,10 +364,18 @@
               <div class="col-md-4 clearfix d-none d-md-block">
               <div class="card-slider">
                   <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=@properties[9].latitude%>,<%=@properties[9].longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
-                  <p><%= @properties[9].address %></p>
+                  <p><%= truncate(@properties[9].address) %></p>
                   <p><%= @properties[9].landlord.name %></p>
-                  <p>Rating: ★★★☆☆</p>
-                  <p class="btn-submit ">See property</p>
+                    <div>
+                      <p>
+                        <% @properties[9].average_rating_overall.to_i.times do %>
+                          <i class="fas fa-star black"></i>
+                        <% end %>
+                      </p>
+                    </div>
+                  <%= link_to property_path(@properties[9].id) do %>
+                    <p class="btn-submit text-center">See property</p>
+                  <% end %>
               </div>
 
               </div>
