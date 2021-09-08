@@ -33,8 +33,8 @@
         <ul>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= url_for(@reviews[1].user.avatar) %>" id="avatar-img"/>
-              <p class="no-margin"> <strong> - <%= @reviews[1].user.first_name  %></strong></p>
+                <img src="<%= url_for(@reviews[1].user.avatar) %>" id="avatar-img"/>
+                <p class="no-margin pl-2"> <strong><%= @reviews[1].user.first_name  %></strong></p>
             </div>
             <div>
             <% @reviews[1].property_rating.times do %>
@@ -47,7 +47,7 @@
           <li>
             <div class="d-flex align-items-center">
               <img src="<%= url_for(@reviews[2].user.avatar) %>" id="avatar-img"/>
-              <p class="no-margin"> <strong> - <%=@reviews[2].user.first_name  %></strong></p>
+              <p class="no-margin pl-2"> <strong><%=@reviews[2].user.first_name  %></strong></p>
             </div>
             <div>
             <% @reviews[2].property_rating.times do %>
@@ -60,66 +60,66 @@
           <li class="first">
             <div class="d-flex align-items-center">
               <img src="<%= url_for(@reviews[3].user.avatar) %>" id="avatar-img"/>
-              <p class="no-margin"> <strong> - <%= @reviews[3].user.first_name  %></strong></p>
+              <p class="no-margin pl-2"> <strong><%= @reviews[3].user.first_name  %></strong></p>
             </div>
             <div>
             <% @reviews[3].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
-            <p><em><%= @reviews[3].property_comment %></em></p>
+            <p><em>"<%= @reviews[3].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[3].property.address) %></p>
           </li>
           <li>
             <div class="d-flex align-items-center">
               <img src="<%= url_for(@reviews[4].user.avatar) %>" id="avatar-img"/>
-              <p class="no-margin"> <strong> - <%= @reviews[4].user.first_name  %></strong></p>
+              <p class="no-margin pl-2"> <strong><%= @reviews[4].user.first_name  %></strong></p>
             </div>
             <div>
             <% @reviews[4].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
-            <p><em><%= @reviews[4].property_comment %></em></p>
+            <p><em>"<%= @reviews[4].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[4].property.address) %></p>
           </li>
           <li>
             <div class="d-flex align-items-center">
               <img src="<%= url_for(@reviews[8].user.avatar) %>" id="avatar-img"/>
-              <p class="no-margin"> <strong> - <%= @reviews[8].user.first_name  %></strong></p>
+              <p class="no-margin pl-2"> <strong><%= @reviews[8].user.first_name  %></strong></p>
             </div>
             <div>
             <% @reviews[8].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
-            <p><em><%= @reviews[8].property_comment %></em></p>
+            <p><em>"<%= @reviews[8].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[8].property.address) %></p>
           </li>
           <li>
             <div class="d-flex align-items-center">
               <img src="<%= url_for(@reviews[6].user.avatar) %>" id="avatar-img"/>
-              <p class="no-margin"> <strong> - <%= @reviews[1].user.first_name  %></strong></p>
+              <p class="no-margin pl-2"> <strong><%= @reviews[1].user.first_name  %></strong></p>
             </div>
            <div>
             <% @reviews[6].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
-            <p><em><%= @reviews[6].property_comment %></em></p>
+            <p><em>"<%= @reviews[6].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[6].property.address) %></p>
           </li>
           <li>
             <div class="d-flex align-items-center">
               <img src="<%= url_for(@reviews[0].user.avatar) %>" id="avatar-img" />
-              <p class="no-margin"> <strong> - <%= @reviews[2].user.first_name  %></strong></p>
+              <p class="no-margin pl-2"> <strong><%= @reviews[2].user.first_name  %></strong></p>
             </div>
             <div>
             <% @reviews[0].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
             </div>
-            <p><em><%= @reviews[0].property_comment %></em></p>
+            <p><em>"<%= @reviews[0].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[0].property.address) %></p>
           </li>
         </ul>
