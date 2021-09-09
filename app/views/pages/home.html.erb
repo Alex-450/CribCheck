@@ -33,7 +33,9 @@
         <ul>
           <li>
             <div class="d-flex align-items-center">
+              <% if @reviews[1].user.avatar != nil %>
                 <img src="<%= url_for(@reviews[1].user.avatar) %>" id="avatar-img"/>
+              <% end %>
                 <p class="no-margin pl-2"> <strong><%= @reviews[1].user.first_name  %></strong></p>
             </div>
             <div>
@@ -49,7 +51,9 @@
           </li>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= url_for(@reviews[2].user.avatar) %>" id="avatar-img"/>
+              <% if @reviews[2].user.avatar != nil %>
+                <img src="<%= url_for(@reviews[2].user.avatar) %>" id="avatar-img"/>
+              <% end %>
               <p class="no-margin pl-2"> <strong><%=@reviews[2].user.first_name  %></strong></p>
             </div>
             <div>
@@ -65,7 +69,9 @@
           </li>
           <li class="first">
             <div class="d-flex align-items-center">
-              <img src="<%= url_for(@reviews[3].user.avatar) %>" id="avatar-img"/>
+              <% if @reviews[3].user.avatar != nil %>
+                <img src="<%= url_for(@reviews[3].user.avatar) %>" id="avatar-img"/>
+              <% end %>
               <p class="no-margin pl-2"> <strong><%= @reviews[3].user.first_name  %></strong></p>
             </div>
             <div>
@@ -81,7 +87,9 @@
           </li>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= url_for(@reviews[4].user.avatar) %>" id="avatar-img"/>
+              <% if @reviews[4].user.avatar != nil %>
+                <img src="<%= url_for(@reviews[4].user.avatar) %>" id="avatar-img"/>
+              <% end %>
               <p class="no-margin pl-2"> <strong><%= @reviews[4].user.first_name  %></strong></p>
             </div>
             <div>
@@ -97,7 +105,9 @@
           </li>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= url_for(@reviews[8].user.avatar) %>" id="avatar-img"/>
+              <% if @reviews[8].user.avatar != nil %>
+                <img src="<%= url_for(@reviews[8].user.avatar) %>" id="avatar-img"/>
+              <% end %>
               <p class="no-margin pl-2"> <strong><%= @reviews[8].user.first_name  %></strong></p>
             </div>
             <div>
@@ -113,7 +123,9 @@
           </li>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= url_for(@reviews[6].user.avatar) %>" id="avatar-img"/>
+              <% if @reviews[6].user.avatar != nil %>
+                <img src="<%= url_for(@reviews[6].user.avatar) %>" id="avatar-img"/>
+              <% end %>
               <p class="no-margin pl-2"> <strong><%= @reviews[1].user.first_name  %></strong></p>
             </div>
            <div>
@@ -129,7 +141,9 @@
           </li>
           <li>
             <div class="d-flex align-items-center">
-              <img src="<%= url_for(@reviews[0].user.avatar) %>" id="avatar-img" />
+              <% if @reviews[0].user.avatar != nil %>
+                <img src="<%= url_for(@reviews[0].user.avatar) %>" id="avatar-img"/>
+              <% end %>
               <p class="no-margin pl-2"> <strong><%= @reviews[2].user.first_name  %></strong></p>
             </div>
             <div>

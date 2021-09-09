@@ -50,7 +50,9 @@
           <li>
         <%= link_to property_review_path(@property, review) do %>
             <header>
-              <img src="<%= url_for(review.user.avatar) %>"/>
+               <% if review.user.avatar != nil %>
+                <img src="<%= url_for(review.user.avatar) %>"/>
+              <% end %>
               <div>
                 <div><%= "#{review.user.first_name} #{review.user.last_name}" %></div>
                 <div class="review-date"><%= review.created_at.strftime('%B %Y') %></div>
