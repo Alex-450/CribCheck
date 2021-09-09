@@ -1,10 +1,18 @@
-<div id="properties-container" class="container mw-100">
+<div id="landlord-container" class="container mw-100">
   <div class="row">
     <header class="col-12 text-center hidden-mob">
       <h1><%= @landlord.name %></h1>
       <% if @landlord.reviews.count > 0 %>
+        <p>
+          <% @landlord.average_rating_overall.to_i.times do %>
+            <i class="fas fa-star black"></i>
+          <% end %>
+          <% (5 - @landlord.average_rating_overall.to_i).times do %>
+            <i class="far fa-star"></i>
+          <% end %>
+        </p>
         <%# Landlord overall rating %>
-        <div class="d-flex justify-content-between flex-wrap my-5 mx-5 prop-rating  " >
+        <div class="my-5 mx-5 landlord-rating">
           <div>
             <p>Overall rating</p>
             <p class="rating-slider" style="--rating: <%= @landlord.average_rating_overall * 20 %>%"></p>
