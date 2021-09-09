@@ -109,32 +109,32 @@ Review.destroy_all
 Landlord.destroy_all
 seeded_users = User.where(location: "Tokyo")
 
-# Destroy previously seeded users
+Destroy previously seeded users
 
-# seeded_users.each do |user|
-#   User.find(user.id).destroy
-# end
+seeded_users.each do |user|
+  User.find(user.id).destroy
+end
 
-# puts "Creating users..."
+puts "Creating users..."
 
 y = 1
 
-# 10.times do
-#   first_name = Faker::Name.unique.first_name
-#   last_name = Faker::Name.unique.last_name
-#   password = Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 3, min_numeric: 3)
-#   user = User.create(
-#     first_name: first_name,
-#     last_name: last_name,
-#     location: "Tokyo",
-#     email: "#{first_name}.#{last_name}@gmail.com",
-#     password: password,
-#     password_confirmation: password
-#   )
-#   user.avatar.attach(io: File.open(Rails.root.join("app/assets/images/user_avatars/#{y}.png")), filename: "avatar1.jpg")
-#   p "created #{User.last}"
-#   y += 1
-# end
+10.times do
+  first_name = Faker::Name.unique.first_name
+  last_name = Faker::Name.unique.last_name
+  password = Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 3, min_numeric: 3)
+  user = User.create(
+    first_name: first_name,
+    last_name: last_name,
+    location: "Tokyo",
+    email: "#{first_name}.#{last_name}@gmail.com",
+    password: password,
+    password_confirmation: password
+  )
+  user.avatar.attach(io: File.open(Rails.root.join("app/assets/images/user_avatars/#{y}.png")), filename: "avatar1.jpg")
+  p "created #{User.last}"
+  y += 1
+end
 
 puts "Creating landlords..."
 
