@@ -53,7 +53,7 @@
               <img src="<%= url_for(review.user.avatar) %>"/>
               <div>
                 <div><%= "#{review.user.first_name} #{review.user.last_name}" %></div>
-                <div class="review-date"><em><%= review.created_at %></em></div>
+                <div class="review-date"><%= review.created_at.strftime('%B %Y') %></div>
               </div>
               <p>
                 <% if review.property_rating.nil? %>
