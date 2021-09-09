@@ -4,12 +4,15 @@
 
 <div id="property-container" class="container">
   <div class="row">
-    <%# Property address, landlord, img %>
+
+    <%# Property address, landlord %>
     <div class="col-12 card-show">
       <% lat = @property.latitude  %>
       <% long = @property.longitude %>
       <h1><%= @property.address %></h1>
-      <p class="prop-info landlord">owned by: <span><%= link_to @property.landlord.name, landlord_path(@property.landlord.id) %></span></p>
+      <p class="prop-info landlord">owned by <span><%= link_to @property.landlord.name, landlord_path(@property.landlord.id) %></span></p>
+
+      <%# Property img & card %>
       <div class="prop-img-map">
         <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
         <div id="map"
@@ -18,27 +21,29 @@
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
       </div>
-      <p class="prop-info mt-3 score"><span>Overall score: </span><i class="fas fa-star"></i><%= @property.average_property_rating %> (<%= pluralize(@property.reviews.size, 'review') %>)</p>
 
       <%# Property overall rating %>
-      <div class="d-flex justify-content-between flex-wrap my-5 prop-rating" >
-        <div>
-          <p>Landlord overall rating</p>
-          <p class="rating-slider" style="--rating: <%= @property.landlord.average_landlord_rating * 20 %>%"></p>
+      <p class="prop-info mt-3 score"><span>Overall score: </span><i class="fas fa-star"></i><%= @property.average_property_rating %> (<%= pluralize(@property.reviews.size, 'review') %>)</p>
+        <div class="my-5 prop-rating">
+          <div>
+            <p>Landlord overall rating</p>
+            <p class="rating-slider" style="--rating: <%= @property.landlord.average_landlord_rating * 20 %>%"></p>
+          </div>
+          <div>
+            <p>Communication</p>
+            <p class="rating-slider" style="--rating: <%= @property.average_communication_rating * 20 %>%"></p>
+          </div>
+          <div>
+            <p>Maintenance</p>
+            <p class="rating-slider" style="--rating: <%= @property.average_maintenance_rating * 20 %>%"></p>
+          </div>
+          <div>
+            <p>Cleanliness</p>
+            <p class="rating-slider" style="--rating: <%= @property.average_cleanliness_rating * 20 %>%"></p>
+          </div>
         </div>
-        <div>
-          <p>Communication</p>
-          <p class="rating-slider" style="--rating: <%= @property.average_communication_rating * 20 %>%"></p>
-        </div>
-         <div>
-          <p>Maintenance</p>
-          <p class="rating-slider" style="--rating: <%= @property.average_maintenance_rating * 20 %>%"></p>
-        </div>
-        <div>
-          <p>Cleanliness</p>
-          <p class="rating-slider" style="--rating: <%= @property.average_cleanliness_rating * 20 %>%"></p>
-        </div>
-      </div>
+
+      <%# Property reviews %>
       <% if @property.reviews.any? %>
         <ul class="reviews">
         <% @property.reviews.each do |review|%>
@@ -82,8 +87,7 @@
   </div> <!-- .row -->
 </div> <!-- #property-container -->
 
-<%# Property review %>
-
+  <%# Property new review %>
 <div class="modal create-review" id="toggle-review" style="display:none;" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="card-new-review modal-content" style="border:none;">

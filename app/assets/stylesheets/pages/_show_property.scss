@@ -1,13 +1,49 @@
+.rating-slider {
+  background-color: $green;
+  height: 1rem;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--rating);
+    background-color: $call-to-action;
+  }
+}
+
 #property-container {
   margin-top: 7rem;
 
-  h1 {
-    padding-top: 1rem;
+  .card-show {
+    @include media-breakpoint-up(md) {
+      text-align: left;
+      padding: 0 3rem;
+    }
   }
 
-  .card-show {
-    text-align: left;
-    padding: 0 3rem;
+  h1 {
+    padding-top: 1rem;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .landlord {
+    font-size: 1.1rem;
+
+    a {
+      color: black;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
   }
 
   .prop-info {
@@ -16,43 +52,69 @@
     }
 
     i {
-      padding-right: 4px;
       color: $call-to-action;
+      padding-right: 4px;
     }
   }
 
   .prop-img-map {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
     img {
-      width: 49%;
       border-radius: 5px;
-
+      padding-bottom: 8px;
     }
 
     #map {
-      height: auto;
-      width: 49%;
+      height: 300px;
       border-radius: 5px;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      img {
+        width: 49%;
+      }
+
+      #map {
+        height: auto;
+        width: 49%;
+      }
     }
   }
 
-  .landlord {
-      font-size: 1.1rem;
+  .score {
+    @include media-breakpoint-up(md) {
+      font-size: 1.2rem;
+    }
+  }
+  .prop-rating {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-      a {
-        color: black;
-      }
-
-      a:hover {
-        text-decoration: none;
+    & > div {
+      width: 100%;
+      margin-bottom: 1rem;
+      @include media-breakpoint-up(md) {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
       }
     }
 
-  .score {
-    font-size: 1.2rem;
+    p {
+      margin: 0;
+    }
+    .rating-slider {
+      margin: .25rem auto 0;
+      max-width: 20rem;
+      @include media-breakpoint-up(md) {
+        margin: .25rem;
+        width: 20rem;
+      }
+    }
   }
 
   .reviews {
@@ -65,78 +127,57 @@
     margin: 8px auto;
 
     li {
-      width: 45%;
+      width: 100%;
       border-radius: 5px;
       background-color: $green;
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
-
-      a {
-        color: inherit;
-        text-decoration: inherit;
-        font-weight: normal;
+      @include media-breakpoint-up(md) {
+        width: 45%;
       }
+    }
 
-      header {
-        display: flex;
-        padding-top: 8px;
-        margin-bottom: 16px;
+    a {
+      color: inherit;
+      text-decoration: inherit;
+      font-weight: normal;
+    }
 
-        div {
-          flex-grow: 1;
-        }
+    header {
+      display: flex;
+      padding-top: 8px;
+      margin-bottom: 16px;
+
+      div {
+        flex-grow: 1;
       }
+    }
 
-      .review-date {
-        font-size: .7rem;
-      }
+    .review-date {
+      font-size: .7rem;
     }
 
     i {
       color: $call-to-action;
+
+      @include media-breakpoint-down(md) {
+        font-size: 0.8em;
+      }
+    }
+
+    img {
+      width:50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 8px;
     }
   }
 
-  .reviews img {
-    width:50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 8px;
-  }
-}
-
-.review-link {
-  margin: 40px auto -15px;
-  text-align: center;
-}
-
-.prop-rating > div {
-  width: 45%;
-  display: flex;
-  justify-content: space-between;
-  color: black;
-}
-
-.rating-slider {
-  background-color: $green;
-  height: 1rem;
-  width: 20rem;
-  position: relative;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  margin: 0 .25rem;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: var(--rating);
-    background-color: $call-to-action;
-
+  .review-link {
+    margin: 40px auto -15px;
+    text-align: center;
   }
 }
 
