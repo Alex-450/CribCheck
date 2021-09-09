@@ -1,7 +1,7 @@
-<div class="container-fluid px-0 padding-200" >
+<div class="container-fluid px-0" style="padding-top: 110px;">
         <div class="row">
           <div class="col-12">
-            <h1 class="text-center">Landlords</h1>
+            <h1 class="text-center" style="padding-bottom: 8px;">Landlords</h1>
             <%= form_tag landlords_path, class: 'search', method: :get do %>
               <%= text_field_tag :query, nil, placeholder: "Search for a landlord...", class: 'form-control form-tag' %>
               <button type="submit" class="btn btn-search">
