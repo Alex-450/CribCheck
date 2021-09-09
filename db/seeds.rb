@@ -56,8 +56,8 @@ negative_landlord_reviews = [
   "Had a really bad experience with this landlord, and everyone I've spoken to says the same!",
   "Dreadful, just dreadful.",
   "Really disappointing experience. Would definitely not rent from them again.",
-  "",
-  ""
+  "Never repaired anything. Was impossible to contact",
+  "Do not rent from them!!"
 ]
 
 positive_property_reviews = [
@@ -95,7 +95,7 @@ negative_property_reviews = [
   "Nice place but requires loads of maintenance for the garden, neighbours are really unfriendly",
   "Day one: fridge didn't work, oven was dirty, place has not been refurbished in years.",
   "Needs some TLC, landlord hasn't renovated in about 20 years by the looks of it",
-  "",
+  "Paint peeling off the walls, issues with the drains and ridiculously cold in the winter.",
   "",
   "",
   "",
