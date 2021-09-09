@@ -4,7 +4,7 @@ const loadDynamicBannerText = () => {
   const bannerTyped = document.getElementById('banner-typed-text')
   if (bannerTyped) {
     new Typed(bannerTyped, {
-      strings: ["No more surprises..."],
+      strings: ["Holding landlords accountable."],
       typeSpeed: 50,
       loop: false
     });
