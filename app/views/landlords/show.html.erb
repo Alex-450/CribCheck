@@ -1,4 +1,4 @@
-<div id="properties-container" class="container mw-100">
+<div id="landlord-container" class="container mw-100">
   <div class="row">
     <header class="col-12 text-center hidden-mob">
       <h1><%= @landlord.name %></h1>
@@ -12,7 +12,7 @@
           <% end %>
         </p>
         <%# Landlord overall rating %>
-        <div class="d-flex justify-content-between flex-wrap my-5 mx-5 prop-rating  " >
+        <div class="my-5 mx-5 landlord-rating">
           <div>
             <p>Overall rating</p>
             <p class="rating-slider" style="--rating: <%= @landlord.average_rating_overall * 20 %>%"></p>
@@ -65,7 +65,7 @@
               <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=property.latitude%>,<%=property.longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
               <p> <%= property.address %></p>
               <p>Landlord: <%= property.landlord.name %></p>
-              <p>Rating: ★★★☆☆</p>
+              <p>Rating: <%= property.average_property_rating %></p>
               <p class="btn-submit">See property</p>
             <% end %>
           <% end %>
