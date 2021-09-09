@@ -241,3 +241,11 @@ body{
     margin-bottom: 10px ;
   }
 }
+
+.responsive-title {
+
+  @include media-breakpoint-down(md) {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
