@@ -22,12 +22,10 @@
               <p>Landlord: <%= property.landlord.name %></p>
               <p>
                 <% property.average_rating_overall.to_i.times do %>
-                  <%# <i class="fas fa-star black"></i> %>
-                  <span>★</span>
+                  <i class="fas fa-star black"></i>
                 <% end %>
                 <% (5 - property.average_rating_overall.to_i).times do %>
-                  <%# <i class="far fa-star black"></i> %>
-                  <span>☆</span>
+                  <i class="far fa-star black"></i>
                 <% end %>
               </p>
               <p class="btn-submit">See property</p>

@@ -57,7 +57,14 @@
               <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=property.latitude%>,<%=property.longitude%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
               <p> <%= property.address %></p>
               <p>Landlord: <%= property.landlord.name %></p>
-              <p>Rating: ★★★☆☆</p>
+              <p>
+                <% property.average_rating_overall.to_i.times do %>
+                  <i class="fas fa-star black"></i>
+                <% end %>
+                <% (5 - property.average_rating_overall.to_i).times do %>
+                  <i class="far fa-star black"></i>
+                <% end %>
+              </p>
               <p class="btn-submit">See property</p>
             <% end %>
           <% end %>

@@ -40,6 +40,9 @@
             <% @reviews[1].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
+              <% (5 - @reviews[1].property_rating).times do %>
+                          <i class="far fa-star black"></i>
+              <% end %>
             </div>
             <p><em>"<%= @reviews[1].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[1].property.address) %></p>
@@ -53,6 +56,9 @@
             <% @reviews[2].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
+            <% (5 - @reviews[2].property_rating).times do %>
+                        <i class="far fa-star black"></i>
+            <% end %>
             </div>
             <p><em>"<%= @reviews[2].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[2].property.address) %></p>
@@ -66,6 +72,9 @@
             <% @reviews[3].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
+            <% (5 - @reviews[3].property_rating).times do %>
+                        <i class="far fa-star black"></i>
+            <% end %>
             </div>
             <p><em>"<%= @reviews[3].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[3].property.address) %></p>
@@ -79,6 +88,9 @@
             <% @reviews[4].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
+            <% (5 - @reviews[4].property_rating).times do %>
+                        <i class="far fa-star black"></i>
+            <% end %>
             </div>
             <p><em>"<%= @reviews[4].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[4].property.address) %></p>
@@ -92,6 +104,9 @@
             <% @reviews[8].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
+            <% (5 - @reviews[8].property_rating).times do %>
+                        <i class="far fa-star black"></i>
+            <% end %>
             </div>
             <p><em>"<%= @reviews[8].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[8].property.address) %></p>
@@ -105,6 +120,9 @@
             <% @reviews[6].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
+            <% (5 - @reviews[6].property_rating).times do %>
+                        <i class="far fa-star black"></i>
+            <% end %>
             </div>
             <p><em>"<%= @reviews[6].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[6].property.address) %></p>
@@ -118,6 +136,9 @@
             <% @reviews[0].property_rating.times do %>
                 <i class="fas fa-star black"></i>
               <% end %>
+            <% (5 - @reviews[0].property_rating).times do %>
+                        <i class="far fa-star black"></i>
+            <% end %>
             </div>
             <p><em>"<%= @reviews[0].property_comment %>"</em></p>
             <p class="small-bold"><%= truncate(@reviews[0].property.address) %></p>
@@ -197,6 +218,9 @@
                       <% @properties[1].average_rating_overall.to_i.times do %>
                         <i class="fas fa-star black"></i>
                       <% end %>
+                      <% (5 - @properties[1].average_rating_overall.to_i).times do %>
+                          <i class="far fa-star black"></i>
+                        <% end %>
                     </p>
                   </div>
                   <%= link_to property_path(@properties[1].id) do %>
@@ -216,6 +240,9 @@
                       <% @properties[2].average_rating_overall.to_i.times do %>
                         <i class="fas fa-star black"></i>
                       <% end %>
+                      <% (5 - @properties[2].average_rating_overall.to_i).times do %>
+                          <i class="far fa-star black"></i>
+                        <% end %>
                     </p>
                   </div>
                   <%= link_to property_path(@properties[2].id) do %>
@@ -236,6 +263,9 @@
                       <% @properties[3].average_rating_overall.to_i.times do %>
                         <i class="fas fa-star black"></i>
                       <% end %>
+                      <% (5 - @properties[3].average_rating_overall.to_i).times do %>
+                          <i class="far fa-star black"></i>
+                        <% end %>
                     </p>
                   </div>
                   <%= link_to property_path(@properties[3].id) do %>
@@ -264,6 +294,9 @@
                       <% @properties[4].average_rating_overall.to_i.times do %>
                         <i class="fas fa-star black"></i>
                       <% end %>
+                      <% (5 - @properties[4].average_rating_overall.to_i).times do %>
+                          <i class="far fa-star black"></i>
+                        <% end %>
                     </p>
                   </div>
                   <%= link_to property_path(@properties[4].id) do %>
@@ -285,6 +318,9 @@
                       <% @properties[5].average_rating_overall.to_i.times do %>
                         <i class="fas fa-star black"></i>
                       <% end %>
+                      <% (5 - @properties[5].average_rating_overall.to_i).times do %>
+                          <i class="far fa-star black"></i>
+                        <% end %>
                     </p>
                   </div>
                   <%= link_to property_path(@properties[5].id) do %>
@@ -305,6 +341,9 @@
                       <% @properties[6].average_rating_overall.to_i.times do %>
                         <i class="fas fa-star black"></i>
                       <% end %>
+                      <% (5 - @properties[6].average_rating_overall.to_i).times do %>
+                          <i class="far fa-star black"></i>
+                        <% end %>
                     </p>
                   </div>
                   <%= link_to property_path(@properties[6].id) do %>
@@ -331,6 +370,9 @@
                       <% @properties[7].average_rating_overall.to_i.times do %>
                         <i class="fas fa-star black"></i>
                       <% end %>
+                      <% (5 - @properties[7].average_rating_overall.to_i).times do %>
+                          <i class="far fa-star black"></i>
+                        <% end %>
                     </p>
                   </div>
                   <%= link_to property_path(@properties[7].id) do %>
@@ -351,6 +393,9 @@
                       <% @properties[8].average_rating_overall.to_i.times do %>
                         <i class="fas fa-star black"></i>
                       <% end %>
+                      <% (5 - @properties[8].average_rating_overall.to_i).times do %>
+                          <i class="far fa-star black"></i>
+                        <% end %>
                     </p>
                   </div>
                   <%= link_to property_path(@properties[8].id) do %>
@@ -370,6 +415,9 @@
                       <p>
                         <% @properties[9].average_rating_overall.to_i.times do %>
                           <i class="fas fa-star black"></i>
+                        <% end %>
+                        <% (5 - @properties[9].average_rating_overall.to_i).times do %>
+                          <i class="far fa-star black"></i>
                         <% end %>
                       </p>
                     </div>
