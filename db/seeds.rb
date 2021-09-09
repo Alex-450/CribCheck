@@ -114,6 +114,8 @@ Review.destroy_all
 Landlord.destroy_all
 seeded_users = User.where(location: "Tokyo")
 
+# Destroy previously seeded users
+
 # seeded_users.each do |user|
 #   User.find(user.id).destroy
 # end
@@ -141,6 +143,8 @@ y = 1
 
 puts "Creating landlords..."
 
+# Create five landlords
+
 5.times do
   Landlord.create(name: "#{Faker::Name.unique.first_name} #{Faker::Name.unique.last_name}")
 end
@@ -149,6 +153,9 @@ landlord_ids = Landlord.all.ids
 user_ids = User.where(location: "Tokyo").all.ids
 
 puts "Creating properties..."
+
+# Create 10 properties with random landlords and iterate through addresses
+
 i = 0
 10.times do
   Property.create(user_id: user_ids[i], landlord_id: landlord_ids.sample, address: addresses[i])
@@ -162,6 +169,8 @@ property_ids = Property.all.ids
 positive_rating = (3..5).to_a
 negative_rating = (1..2).to_a
 rental_cost = (700..1000).to_a
+
+# Create five negative and five positive reviews
 
 x = 0
 5.times do
@@ -181,11 +190,11 @@ x = 0
   x += 1
 end
 
-x = 4
+x = 5
 5.times do
   Review.create!(
     user_id: user_ids[x],
-    property_id: property_ids[x + 1],
+    property_id: property_ids[x],
     landlord_rating: negative_rating.sample,
     property_rating: negative_rating.sample,
     rental_cost: rental_cost.sample,
@@ -199,4 +208,5 @@ x = 4
   p x
   x += 1
 end
+
 puts "Done!"
