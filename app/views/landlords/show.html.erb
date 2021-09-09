@@ -5,10 +5,10 @@
       <% if @landlord.reviews.count > 0 %>
         <p>
           <% @landlord.average_rating_overall.to_i.times do %>
-            <span class="green-star">★</span>
+            <i class="fas fa-star black"></i>
           <% end %>
           <% (5 - @landlord.average_rating_overall.to_i).times do %>
-            <span class="green-star">☆</span>
+            <i class="far fa-star"></i>
           <% end %>
         </p>
         <%# Landlord overall rating %>
