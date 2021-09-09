@@ -1,0 +1,64 @@
+#landlord-container {
+
+  header {
+    color: white;
+    background-color: $light-green;
+    z-index: 1;
+    padding-top: 110px;
+    padding-bottom: 1.25rem;
+  }
+
+  .cards-index {
+    margin: -1rem;
+  }
+
+  .card-index {
+    color: $dark-green;
+    text-decoration: none;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 2rem;
+    text-align: center;
+
+    :nth-last-child(2) {
+      flex-grow: 1;
+    }
+
+    .btn-submit {
+      align-self: center;
+      margin-bottom: -1rem;
+    }
+  }
+
+  .card-index .btn-submit {
+    left: auto;
+    bottom: auto;
+    transform: none;
+  }
+
+  .landlord-rating {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & > div {
+      width: 100%;
+      margin-bottom: 1rem;
+      @include media-breakpoint-up(md) {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .rating-slider {
+    margin: .25rem auto 0;
+    // max-width: 20rem;
+    @include media-breakpoint-up(md) {
+      margin: .25rem;
+      // width: 20rem;
+    }
+  }
+}
