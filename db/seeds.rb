@@ -11,7 +11,12 @@ addresses = [
   "Louise Wentstraat 145, Amsterdam",
   "Imstenrade 68, Amsterdam",
   "Graaf Janlaan 7, Amstelveen",
-  "Betsy Perklaan 15, Amstelveen"
+  "Betsy Perklaan 15, Amstelveen",
+  "Nedersticht 72, Amsterdam",
+  "Asingaborg, Amsterdam",
+  "Soetendaal 21, Amsterdam",
+  "Noordhollandstraat 26, Amsterdam",
+  "Soetendaal 45, Amsterdam"
 ]
 
 positive_landlord_reviews = [
@@ -71,16 +76,6 @@ positive_property_reviews = [
   "Really modern and really well looked-after, can highly recommend!",
   "Great place, can't recommend enough!",
   "Amazing, really recommend!",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
 ]
 
 negative_property_reviews = [
@@ -96,15 +91,15 @@ negative_property_reviews = [
   "Day one: fridge didn't work, oven was dirty, place has not been refurbished in years.",
   "Needs some TLC, landlord hasn't renovated in about 20 years by the looks of it",
   "Paint peeling off the walls, issues with the drains and ridiculously cold in the winter.",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
+  "Actually could be a nice apartment, but the landlord is terrible and refuses to do any work on the place at all.",
+  "Loads of really cool places nearby, but not worth living in this house!",
+  "I wanted to move out as soon as I had moved in! Nothing in the house worked properly.",
+  "The worst rental experience I have had.",
+  "Everything in the place is SO old, actually pretty dangerous to be honest.",
+  "I don't think this place has been refurbished in about 20 years, clearly the landlord doesn't care.",
+  "This place was bad, really, really bad!",
+  "Don't make the same mistake I did, do not move in here!",
+  "It's a shame because the building is nice, and the area is great, but the apartment is really run down!"
 ]
 
 puts "Clearing properties, reviews and landlords"
@@ -191,7 +186,7 @@ x = 0
 end
 
 x = 5
-5.times do
+4.times do
   Review.create!(
     user_id: user_ids[x],
     property_id: property_ids[x],
@@ -205,7 +200,67 @@ x = 5
     property_comment: negative_property_reviews[x]
   )
   puts "Created: #{Review.last.landlord_comment}"
-  p x
+  x += 1
+end
+
+# Add extra reviews to Betsy Perklaan for demo
+
+p "betsy landlord = #{Property.last.landlord.id}"
+
+x = 0
+y = 9
+5.times do
+  Review.create!(
+    user_id: user_ids[x],
+    property_id: property_ids.last,
+    landlord_rating: negative_rating.sample,
+    property_rating: negative_rating.sample,
+    rental_cost: 800,
+    communication: negative_rating.sample,
+    maintenance: negative_rating.sample,
+    cleanliness: negative_rating.sample,
+    landlord_comment: negative_landlord_reviews[y],
+    property_comment: negative_property_reviews[y]
+  )
+  x += 1
+  y += 1
+end
+
+# Add extra properties to Betsy Perklaan landlord
+
+betsy_landlord = Property.last.landlord.id
+
+i = 10
+
+5.times do
+  Property.create!(
+    user_id: user_ids.sample,
+    landlord_id: betsy_landlord,
+    address: addresses[i]
+  )
+  p "Created: #{Property.last.address}"
+  i += 1
+end
+
+# Add reviews to extra properties
+
+x = 10
+property_ids = Property.all.ids
+
+5.times do
+  Review.create!(
+    user_id: user_ids.sample,
+    property_id: property_ids[x],
+    landlord_rating: negative_rating.sample,
+    property_rating: negative_rating.sample,
+    rental_cost: rental_cost.sample,
+    communication: negative_rating.sample,
+    maintenance: negative_rating.sample,
+    cleanliness: negative_rating.sample,
+    landlord_comment: negative_landlord_reviews[y],
+    property_comment: negative_property_reviews[y]
+  )
+  p "Created review: #{Review.last.property_comment} for #{Review.last.property.address}"
   x += 1
 end
 
