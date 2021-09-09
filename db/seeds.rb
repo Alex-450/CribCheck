@@ -13,7 +13,7 @@ addresses = [
   "Graaf Janlaan 7, Amstelveen",
   "Betsy Perklaan 15, Amstelveen",
   "Nedersticht 72, Amsterdam",
-  "Asingaborg, Amsterdam",
+  "Uiterwaardenstraat 229A, Amsterdam",
   "Soetendaal 21, Amsterdam",
   "Noordhollandstraat 26, Amsterdam",
   "Soetendaal 45, Amsterdam"
