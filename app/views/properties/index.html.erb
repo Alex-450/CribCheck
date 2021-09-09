@@ -1,7 +1,7 @@
 <div id="properties-container" class="container mw-100">
   <div class="row">
     <header class="col-12 text-center">
-      <h1>Properties</h1>
+      <h1 style="padding-bottom: 8px;">Properties</h1>
       <%= form_tag properties_path, class: 'search', method: :get do %>
       <%= text_field_tag :query, nil, placeholder: "Search property or landlord...", class: 'form-control form-tag' %>
       <button type="submit" class="btn btn-search">
