@@ -24,7 +24,17 @@ positive_landlord_reviews = [
   "Made us feel really welcome when we moved in, really nice",
   "Awesome landlord!!",
   "Not bad.",
-  "Best landlord ever!!!"
+  "Best landlord ever!!!",
+  "Always responsive. Great communication and always available.",
+  "Really helped us when we moved in and made us feel really welcome.",
+  "Super nice landlord, would definitely rent from them again.",
+  "I've heard of some people having bad experiences with this landlord, but mine were really positive",
+  "Ticked all the boxes, really nice person to rent from.",
+  "The place was immaculate when we moved in, the landlord really made an effort.",
+  "Always really friendly and nice, definitely recommend.",
+  "Great landlord! Definitely recommend.",
+  "Approachable and nice.",
+  "The perfect landlord!"
 ]
 
 negative_landlord_reviews = [
@@ -37,7 +47,17 @@ negative_landlord_reviews = [
   "Really unfriendly and unhelpful, would not recommend to anyone!",
   "Steer clear If you value your sanity!",
   "Kept turning up at the place without warning, was really rude",
-  "Just terrible..."
+  "Just terrible...",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
 ]
 
 positive_property_reviews = [
@@ -50,7 +70,17 @@ positive_property_reviews = [
   "The apartment is nice but the location is really an issue, nowhere near anything.",
   "Really modern and really well looked-after, can highly recommend!",
   "Great place, can't recommend enough!",
-  "Amazing, really recommend!"
+  "Amazing, really recommend!",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
 ]
 
 negative_property_reviews = [
@@ -64,7 +94,17 @@ negative_property_reviews = [
   "Location is great but there is no elevator and you're on the sixth floor, really not great after a while.",
   "Nice place but requires loads of maintenance for the garden, neighbours are really unfriendly",
   "Day one: fridge didn't work, oven was dirty, place has not been refurbished in years.",
-  "Needs some TLC, landlord hasn't renovated in about 20 years by the looks of it"
+  "Needs some TLC, landlord hasn't renovated in about 20 years by the looks of it",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
 ]
 
 puts "Clearing properties, reviews and landlords"
