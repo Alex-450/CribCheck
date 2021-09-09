@@ -4,6 +4,8 @@
   position: relative;
   border-radius: 0.5rem;
   overflow: hidden;
+  width: 100%;
+  max-width: 20rem;
 
   &:before {
     content: "";
@@ -113,12 +115,11 @@
     p {
       margin: 0;
     }
+
     .rating-slider {
       margin: .25rem auto 0;
-      max-width: 20rem;
       @include media-breakpoint-up(md) {
         margin: .25rem;
-        width: 20rem;
       }
     }
   }

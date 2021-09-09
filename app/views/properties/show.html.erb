@@ -12,7 +12,7 @@
       <h1><%= @property.address %></h1>
       <p class="prop-info landlord">owned by <span><%= link_to @property.landlord.name, landlord_path(@property.landlord.id) %></span></p>
 
-      <%# Property img & card %>
+      <%# Property img & map %>
       <div class="prop-img-map">
         <img src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
         <div id="map"
