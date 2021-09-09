@@ -8,6 +8,7 @@
   .card-show {
     text-align: left;
     padding: 0 3rem;
+    border-radius: 10px;
   }
 
   .prop-info {
@@ -48,6 +49,12 @@
 
       a:hover {
         text-decoration: none;
+        color: white;
+        background-color: $call-to-action;
+        // transition: background-color .5s;
+        border: 1px 1px $call-to-action;
+        border-radius: 10px;
+        padding: 4px
       }
     }
 
