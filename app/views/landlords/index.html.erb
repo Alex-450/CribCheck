@@ -22,7 +22,14 @@
                   <div class="table-body">
                     <p class="table-item-center"><%= landlord.name %></p>
                     <p class="table-item-center"><%= landlord.properties.count %></p>
-                    <p class="table-item-right">★★★</p>
+                    <p class="table-item-center">
+                      <% landlord.average_rating_overall.to_i.times do %>
+                        <i class="fas fa-star table-star"></i>
+                      <% end %>
+                      <% (5 - landlord.average_rating_overall.to_i).times do %>
+                        <i class="far fa-star table-star"></i>
+                      <% end %>
+                    </p>
                   </div>
                 <% end %>
           <% end %>

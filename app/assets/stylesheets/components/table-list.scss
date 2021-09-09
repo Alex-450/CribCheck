@@ -3,6 +3,9 @@
   justify-content: center;
 }
 
+.table-star {
+  font-size: 1rem;
+}
 .table-headers-green {
   display: flex;
   justify-content: space-around;
@@ -49,8 +52,12 @@
 }
 
 .table-body:hover {
+  .table-star {
+    color: white;
+  }
   background-color: $dark-green;
   color:white;
+
 }
 
 #landlord-list a {
