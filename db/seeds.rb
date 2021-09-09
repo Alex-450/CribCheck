@@ -109,7 +109,7 @@ Review.destroy_all
 Landlord.destroy_all
 seeded_users = User.where(location: "Tokyo")
 
-Destroy previously seeded users
+# Destroy previously seeded users
 
 seeded_users.each do |user|
   User.find(user.id).destroy
@@ -131,7 +131,7 @@ y = 1
     password: password,
     password_confirmation: password
   )
-  user.avatar.attach(io: File.open(Rails.root.join("app/assets/images/user_avatars/#{y}.png")), filename: "avatar1.jpg")
+  user.avatar.attach(io: File.open(Rails.root.join("app/assets/images/user_avatars/#{y}.png")), filename: "#{y}.jpg")
   p "created #{User.last}"
   y += 1
 end
