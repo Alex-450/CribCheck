@@ -12,7 +12,7 @@
             <% long = @property.longitude %>
             <img src="https://maps.googleapis.com/maps/api/streetview?size=1000x1000&location=<%=lat%>,<%=long%>&fov=80&heading=270&pitch=0&key=<%= ENV['GOOGLE_KEY'] %>" alt="">
           <% end %>
-      <h2 class="px-3 pt-3"><%= @property.address %></h2>
+      <h2 class="px-3 pt-3 text-center"><%= @property.address %></h2>
       <section class="score d-flex justify-content-center m-3">
       <div class="score-card">
         <table class="no-border table-width">
@@ -85,6 +85,6 @@
         <p class="d-green">€<%= @review.rental_cost %>,-</p>
     </section>
     <div class="justify-content-center">
-      <%= link_to 'More properties', landlord_path(@property.landlord.id), class:"btn btn-action mx-3 "%>
+      <%= link_to 'More properties', landlord_path(@property.landlord.id), class:"btn btn-action mx-3 btn-more"%>
     </div>
 </div>
