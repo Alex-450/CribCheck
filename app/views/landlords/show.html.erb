@@ -3,6 +3,14 @@
     <header class="col-12 text-center hidden-mob">
       <h1><%= @landlord.name %></h1>
       <% if @landlord.reviews.count > 0 %>
+        <p>
+          <% @landlord.average_rating_overall.to_i.times do %>
+            <span class="green-star">★</span>
+          <% end %>
+          <% (5 - @landlord.average_rating_overall.to_i).times do %>
+            <span class="green-star">☆</span>
+          <% end %>
+        </p>
         <%# Landlord overall rating %>
         <div class="d-flex justify-content-between flex-wrap my-5 mx-5 prop-rating  " >
           <div>
