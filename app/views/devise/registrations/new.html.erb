@@ -30,13 +30,13 @@
       <%= f.input :avatar,
                   as: :file,
                   input_html: { class: 'd-none' },
-                  label_html: { class: 'btn btn-action'},
+                  label_html: { class: 'btn btn-submit'},
                   label: '📷 Upload a photo'
                    %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
+      <%= f.button :submit, "Sign up", class:"btn btn-action" %>
     </div>
   <% end %>
 
